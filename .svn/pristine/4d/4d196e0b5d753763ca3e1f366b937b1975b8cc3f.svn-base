@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 
+  Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:o="http://omnifaces.org/ui"
+	  xmlns:of="http://omnifaces.org/functions"
+      xmlns:p="http://primefaces.org/ui">
+<!-- Botones Consulta -->
+
+<!-- rsanchez_doc botonGuardar, con las propiedades validateClient y ajax a false estamos indicando que cuando se haga click en el guardar, se van a evaluar las validaciones de la pagina y caso de que nose cumplan mostrar
+los mensajitos de error en pantalla, si se cumplen continua la ejecución en el action -->
+<p:commandButton binding="#{bean.botonGuardar}" value="Guardar" id="botonGuardar" widgetVar="botonGuardar"  image="guardarButton" styleClass="botonera" validateClient="true" ajax="false" update="growlPrincipal" onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+<p:commandButton binding="#{bean.botonAnadir}" value="Añadir" id="botonAnadir"   widgetVar="botonAnadir"   image="nuevoButton" styleClass="botonera" onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" /> 
+<p:commandButton binding="#{bean.botonBuscar}" value="Buscar" id="botonBuscar"  widgetVar="botonBuscar" image="buscarButton" styleClass="botonera" onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+<p:commandButton binding="#{bean.botonEliminarEnBusqueda}" value="Eliminar" id="botonEliminarEnBusqueda" widgetVar="botonEliminarEnBusqueda" update="" image="eliminarButton" styleClass="botonera"/>
+<p:commandButton binding="#{bean.botonLimpiar}" value="Limpiar" id="botonLimpiar" widgetVar="botonLimpiar" image="limpiarButton" styleClass="botonera" onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+<p:commandButton binding="#{bean.botonImprimir}" value="Imprimir" id="botonImprimir" widgetVar="botonImprimir" image="imprimirButton" styleClass="botonera" />
+<p:commandButton binding="#{bean.botonAyuda}" value="Ayuda" id="botonAyuda" widgetVar="botonAyuda" image="ayudaButton" styleClass="botonera"/>
+<p:commandButton binding="#{bean.botonSalir}" value="Salir" id="botonSalir" widgetVar="botonSalir" image="salirButton" styleClass="botonera" onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" />
+
+<p:graphicImage name="logo_gestor.gif" library="imagenes" styleClass="logo-botonera"></p:graphicImage>
+<!-- <p:commandButton   id="botonEliminarEnDetalleConfirm" widgetVar="botonEliminarEnDetalleConfirm" image="eliminarButtonActivo" styleClass="botonera"/>-->
+<!-- <p:commandButton binding="#{bean.botonImprimir}"  id="botonImprimir" widgetVar="botonImprimir" image="imprimirButtonActivo" styleClass="botonera"  update="" /> -->
+	
+<!-- MODAL IMPRESION -->
+
+    <p:dialog header="Imprimir plantillas" widgetVar="modalImpresion" showEffect="explode" modal="true" height="200" width="450">
+    	
+    	<h:panelGrid columns="2">
+   
+		    <h:outputText value="Documento :" />
+       		 <p:autoComplete id="plantilla" value="#{bean.textoComboPlantillasExp}" completeMethod="#{bean.completarPlantillasExp}" dropdown="true" forceSelection="true" scrollHeight="200"/>
+		    <p:spacer></p:spacer>
+		    <p:spacer></p:spacer>
+		</h:panelGrid>
+		
+		<h:panelGrid columns="4">
+		    
+		    <p:commandButton  id="imprimirPlantilla" styleClass="ui-priority-primary" 
+			value="Imprimir" onclick="PF('modalImpresion').hide();" actionListener="#{bean.imprimirPlantilla}" ajax="false"  immediate="true"/>
+			<!-- luisma_doc  19/11/2015 -->
+			<!-- immediate="true" con esta propiedad no nos lanza las validaciones al imprimir, pero tampoco recoge el value del combo -->
+			
+			<!-- ajax="false" si el boton es ajax no imprime la plantilla, asi es que le ponemos false  -->
+			<p:commandButton  id="cerrarModalImpresion" styleClass="ui-priority-primary" 
+			value="Cancelar"	onclick="PF('modalImpresion').hide();"  />
+		   
+		</h:panelGrid>
+    	
+    	
+    	
+	</p:dialog> 
+
+	<!-- Modal impresion grupos cesperilla_pendiente :  hacer modal genérica para grupos y expedientes -->
+	 <p:dialog header="Imprimir plantillas" widgetVar="modalImpresionGrupos" showEffect="explode" modal="true" height="200" width="450">
+    	
+    	<h:panelGrid columns="2">
+   
+		    <h:outputText value="Documento :" />
+		    <p:autoComplete id="plantillaGrupos" value="#{bean.textoComboPlantillasGrupos}" completeMethod="#{bean.completarPlantillasGrup}" dropdown="true" forceSelection="true"/>
+		    <p:spacer></p:spacer>
+		    <p:spacer></p:spacer>
+		    
+		 </h:panelGrid>
+		 
+		 <h:panelGrid columns="4">
+		  
+		    <p:commandButton  id="imprimirPlantillaGrupos" styleClass="ui-priority-primary" 
+			value="Imprimir" onclick="PF('modalImpresionGrupos').hide();" actionListener="#{bean.imprimirPlantilla}" ajax="false" />
+			<!-- luisma_doc  19/11/2015 -->
+			<!-- immediate="true" con esta propiedad no nos lanza las validaciones al imprimir -->
+			<!-- ajax="false" si el boton es ajax no imprime la plantilla, asi es que le ponemos false  -->
+			
+			<p:commandButton  id="cerrarModalImpresionGrupos" styleClass="ui-priority-primary" 
+			value="Cancelar"	onclick="PF('modalImpresionGrupos').hide();"  />
+		   
+		</h:panelGrid>
+    	
+	</p:dialog>  
+	
+	<!-- CONFIRM DELETE DETALLE necesario rsanchez 20160215 -->
+	<p:confirmDialog id="confirmDeleteDetalle"
+		    message="¿Estás seguro de eliminar los registro seleccionado?"
+			header="Confimación" 
+			severity="alert"
+			widgetVar="confirmDeleteDetalle">
+
+		<p:commandButton id="confirmDeleteDetalleButton"  styleClass="ui-priority-primary" 
+			value="Aceptar"
+			immediate="true"
+			
+			onstart="PF('statusDialog').show()" 
+			onsuccess="PF('statusDialog').hide()"
+			actionListener="#{bean.delete}" 
+			oncomplete="PF('confirmDeleteDetalle').hide()"/>
+		<p:commandButton  id="cancelarDelete" styleClass="ui-priority-primary" 
+			value="Cancelar"
+			onclick="PF('confirmDeleteDetalle').hide();" type="button" />
+	</p:confirmDialog>
+	
+	<!-- rsanchez 20160203 Confirm generico para ACON -->
+	<!-- CONFIRM DELETE DETALLE GENERICO -->
+	<p:confirmDialog id="confirmGenerico"
+			message="#{bean.messageConfirmGenerico}"
+			header="#{bean.headerConfirmGenerico}" 
+			severity="#{bean.severityConfirmGenerico}"
+			widgetVar="confirmGenerico">
+
+		<p:commandButton id="confirmGenericoButtonAceptar"  
+			styleClass="ui-priority-primary" 
+			value="Aceptar"
+			onstart="PF('statusDialog').show()" 
+			onsuccess="PF('statusDialog').hide()"			
+			update="#{bean.updateAceptarConfirmGenerico}"
+			oncomplete="PF('confirmGenerico').hide()"
+			binding="#{bean.bindingAceptarConfirmGenerico}"/>
+			
+		<p:commandButton  id="confirmGenericoButtonCancelar" 
+			styleClass="ui-priority-primary"
+			value="Cancelar"
+			onstart="PF('statusDialog').show()" 
+			onsuccess="PF('statusDialog').hide()"
+			rendered="#{bean.renderedCancelarConfirmGenerico}"
+			update="#{bean.updateCancelarConfirmGenerico}"
+			immediate="#{bean.immediateCancelarConfirmGenerico}"
+			onclick="PF('confirmGenerico').hide();"/>
+	</p:confirmDialog>
+	
+	<!--  msalguero modal ayuda -->
+ <p:dialog header="Ayuda" widgetVar="modalAyuda" showEffect="explode" modal="true" id="modalAyuda">
+    	
+    	
+		    <div style='#{bean.estiloAyuda}'>
+		    <ui:include  src='#{bean.rutaAyuda}'  >
+		   
+		    </ui:include>   			
+		
+			<p:commandButton  id="cerrarModalAyuda" styleClass="ui-priority-primary" 
+			value="Aceptar"	onclick="PF('modalAyuda').hide();"  />
+			</div>
+	  </p:dialog> 
+	
+ 
+</html>
+	
+	

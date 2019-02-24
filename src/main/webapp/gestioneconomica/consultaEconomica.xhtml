@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	
+	<ui:define name="botonera">
+		<component:botonera bean="#{consultaEconomicaBean}" /> 
+	</ui:define>
+	<ui:define name="content">
+	
+	<p:fieldset legend="Filtros Consulta">
+		<pe:fluidGrid id="fgConsultaEco" resizeBound="true" hGutter="20" widgetVar="fluidGridWdgt">
+			<pe:fluidGridItem type="input">
+		        	<h:outputLabel value="Importe Desde:" />							
+					<p:inputText value="#{consultaEconomicaBean.importeDesde}" label="Importe" id="importeDesde" maxlength="10" size="10" style="text-transform: uppercase;"></p:inputText>
+				</pe:fluidGridItem>
+				<pe:fluidGridItem type="input">
+		        	<h:outputLabel value="Importe Hasta:" />						
+					<p:inputText value="#{consultaEconomicaBean.importeHasta}" label="Importe" id="importeHasta" maxlength="10" size="10" style="text-transform: uppercase;"></p:inputText>	
+				</pe:fluidGridItem>
+				<pe:fluidGridItem type="input">
+		        	<h:outputLabel value="Fecha Desde:" />		
+		        	<p:inputMask value="#{consultaEconomicaBean.fechaDesde}" id="fechaDesde" mask="99/99/9999"/>					
+				</pe:fluidGridItem>
+				<pe:fluidGridItem type="input">
+		        	<h:outputLabel value="Fecha Hasta:" />		
+		        	<p:inputMask value="#{consultaEconomicaBean.fechaHasta}" id="fechaHasta" mask="99/99/9999"/>					
+				</pe:fluidGridItem>
+				<pe:fluidGridItem type="input">
+					<p:outputLabel value="Parcela:" />
+		        	<p:autoComplete dropdown="true" value="#{consultaEconomicaBean.textoParcela}" completeMethod="#{gestionEconomicaBean.completeText}" />
+				</pe:fluidGridItem>
+		</pe:fluidGrid>
+	</p:fieldset>
+	
+	<p:fieldset legend="Movimientos">
+		<p:dataTable var="movimiento" value="#{consultaEconomicaBean.listaMovimientos}" rowStyleClass="#{movimiento.importe le 0 ? 'old' : null}">
+		    <p:column headerText="Parcela">
+		        <h:outputText value="#{movimiento.fkIdeParcela.nombre}" />
+		    </p:column>
+		    <p:column headerText="Concepto">
+		        <h:outputText value="#{movimiento.concepto}" />
+		    </p:column>
+		    <p:column headerText="Fecha">
+		        <h:outputText value="#{movimiento.fecha}" />
+		    </p:column>
+		    <p:column headerText="Importe">
+		        <h:outputText value="#{movimiento.importe}" />
+		    </p:column>
+		    <p:summaryRow>
+	            <p:column colspan="3" style="text-align:right">
+	                <h:outputText value="Total:" />
+	            </p:column>
+	            <p:column>
+	                <h:outputText value="#{consultaEconomicaBean.importeTotal}">
+	                    <f:convertNumber type="currency" currencySymbol="€" />
+	                </h:outputText>
+	            </p:column>
+        	</p:summaryRow>
+		</p:dataTable>
+	</p:fieldset>
+	
+          
+	</ui:define>
+      		  
+</ui:composition>
+</html>

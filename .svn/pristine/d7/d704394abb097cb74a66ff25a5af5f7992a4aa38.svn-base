@@ -1,0 +1,32 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<f:view>
+		<h:head>
+			<f:loadBundle var="msg" basename="mensajes" />
+			<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+			
+			<title>GrapeCheck</title>
+			<link rel="shortcut icon" type="image/x-icon" href="#{resource['imagenes:logo.jpg']}"/> 
+
+		</h:head>
+		<h:body>
+			<h:outputStylesheet library="css" name="estilo.css" target="head" />
+
+
+			<ui:include src="header.xhtml" />
+			<!--  <ui:include src="menu.xhtml" /> -->
+			<p:panel id="panelContenidoCentral">
+				<div id="contenidoCentral" name="contenidoCentral">
+					<ui:insert name="content" />
+				</div>
+			</p:panel>
+
+			<ui:include src="foot.xhtml" />
+		</h:body>
+	</f:view>
+
+</ui:composition>

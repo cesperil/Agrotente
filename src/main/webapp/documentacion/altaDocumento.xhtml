@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	<ui:define name="titulo">
+		<h:outputLabel value="#{msg['documentacion.alta.titulo']}" />
+	</ui:define>
+
+	<ui:define name="subtitulo">	
+		<h:outputLabel value="#{msg['documentacion.alta.titulo']}"/>
+	</ui:define>
+
+	<ui:define name="botonera">
+		<component:botonera bean="#{altaDocumentoBean}" /> 
+	</ui:define>
+	<ui:define name="content">
+	
+	<p:fieldset legend="#{msg['mantenimiento.usuario.datos.usuario']}">
+    	<h:form>
+    		<p:fileUpload fileUploadListener="#{altaDocumentoBean.handleFileUpload}" mode="advanced" dragDropSupport="true"
+                          update="messages" sizeLimit="10000000" allowTypes="/(\.|\/)(gif|jpe?g|png|pdf)$/" />
+ 
+    		<p:growl id="messages" showDetail="true" />
+		</h:form>
+    </p:fieldset>
+    
+    
+    <p:fieldset legend="#{msg['menu.documentosAdjuntos']}">
+		 <p:dataList value="#{altaDocumentoBean.listaDocAdjunto}" var="documento" id="dataTable" >
+       			 
+       			 <p:commandLink value="#{documento.nombre}" ajax="false" actionListener="#{altaDocumentoBean.descargarDocumento(documento)}">       			 
+       			     <p:fileDownload value="#{altaDocumentoBean.file}" />
+       			 </p:commandLink>
+       			 
+		</p:dataList>
+		
+    </p:fieldset>
+            
+	</ui:define>
+      		  
+</ui:composition>
+</html>

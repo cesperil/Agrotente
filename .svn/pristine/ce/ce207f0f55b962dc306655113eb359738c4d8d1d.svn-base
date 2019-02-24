@@ -1,0 +1,19 @@
+/**
+ * 
+ */
+package es.grapecheck.plataforma.persistencia.dao;
+
+import javax.ejb.LocalBean;
+import javax.inject.Named;
+
+import es.grapecheck.plataforma.persistencia.vo.MedicionesVO;
+
+/**
+ * @author Alejandro
+ *
+ */
+@Named
+@LocalBean
+public class MedicionesDAO extends GenericDAOImpl<MedicionesVO> {
+
+}

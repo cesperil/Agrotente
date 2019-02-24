@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	
+	<ui:define name="botonera">
+		<component:botonera bean="#{gestionEconomicaBean}" /> 
+	</ui:define>
+	<ui:define name="content">
+	
+	<p:fieldset legend="Nueva Actividad">
+		<pe:fluidGrid id="fgDatosMovEco" resizeBound="true" hGutter="20" widgetVar="fluidGridWdgt">
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Concepto" />						
+				<p:inputText value="#{gestionEconomicaBean.movimientoEconomicoVO.concepto}" label="concepto" id="concepto" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Importe" />						
+				<p:inputText value="#{gestionEconomicaBean.movimientoEconomicoVO.importe}" label="Importe" id="importe" maxlength="10" size="10" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Fecha" />		
+	        	<p:inputMask value="#{gestionEconomicaBean.movimientoEconomicoVO.textoFecha}" mask="99/99/9999"/>					
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+			<p:outputLabel value="Parcela:" />
+        	<p:autoComplete dropdown="true" value="#{gestionEconomicaBean.movimientoEconomicoVO.textoParcela}" completeMethod="#{gestionEconomicaBean.completeText}" />
+			</pe:fluidGridItem>
+		</pe:fluidGrid>
+	</p:fieldset>
+          
+	</ui:define>
+      		  
+</ui:composition>
+</html>

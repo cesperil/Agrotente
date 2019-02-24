@@ -1,0 +1,694 @@
+package es.grapecheck.plataforma.utiles;
+
+/**
+ * Clase que contiene las constates.
+ * 
+ */
+public class Constantes {
+
+	public static final String CURRENT_DATE = "CurrentDate";
+
+	public static final String USUARIO_LOGIN = "UsuarioLogin";
+	
+	
+	/**
+	 * Fichero properties que contiene la ruta del fichero de configuración.
+	 */
+	public static final String FILE_RUTA_CONF = "ruta_parametros";
+
+		
+	/**
+	 * Parámetro del properties que contiene el valor de la dirección donde se
+	 * encuentra el fichero de configuración.
+	 */
+	public static final String PARAM_RUTA = "ruta_properties";
+	
+	
+	//Constantes para definir rutas de documentos.
+	public static final String FOLDER_PLANTILLAS = "Plantillas";
+	
+	// Para la fechas
+		public static String[] MES ={""
+		        					,"Enero"
+	            					,"Febrero"
+	            					,"Marzo"
+	            					,"Abril"
+	            					,"Mayo"
+	            					,"Junio"
+	            					,"Julio"
+	            					,"Agosto"
+	            					,"Septiembre"
+	            					,"Octubre"
+	            					,"Noviembre"
+	            					,"Diciembre"};
+	public static final String FOLDER_DOCUMENTOS_ADJUNTOS = "DocumentosAdjuntos";
+	public static final String DOC_INFORME_SOCIAL = "Informe Social";
+	public static final String FOLDER_PLANTILLA_SARA ="PlantillaSARA"; 
+	
+	//Para Severity de alert//
+	public static final String SEVERITY_INFO = "info";
+	public static final String SEVERITY_ALERT = "alert";
+	public static final String SEVERITY_ERROR = "error";
+	public static final String SEVERITY_FATAL = "fatal";
+
+	public static final String NIF_STRING_ASOCIATION = "TRWAGMYFPDXBNJZSQVHLCKET";
+	
+
+	/**
+	 * Codificación utf-8.
+	 */
+	public static final String COD_UTF8 = "UTF-8";
+
+	/**
+	 * Ruta donde se encuentran los circuitos y las imágenes.
+	 */
+	public static final String PATH_CIRCUITOS = "pathCircuitos";
+
+	/**
+	 * Constante de sistema para la separacion
+	 */
+	public static final String SYSTEM_FILE_SEPARATOR = "file.separator";
+	public static final String ESQUEMA_DBO = "dbo";
+	public static final String ESQUEMA_ENTRADASALIDA = "eys";
+	public static final String ESQUEMA_ARQUITECTURA = "arq";
+	public static final String ESQUEMA_GESTIONEXPEDIENTE = "exp";
+	public static final String ESQUEMA_JBPM = "jbpm";
+	public static final String ESQUEMA_NER = "ner";
+
+	public static final String NOM_TABLA_CASILLAS_SIMPLES = "eys_casillas_simp";
+	public static final String NOM_TABLA_CASILLAS_COMP = "eys_casillas_comp";
+	public static final String NOM_TABLA_CASILLAS_TEXTO = "eys_casillas_clob";
+	public static final String NOM_TABLA_CASILLAS_BINARIAS = "eys_casillas_blob";
+
+	public static final String COD_BASICA_CASILLA_SIMPLE = "Simple";
+	public static final String COD_BASICA_CASILLA_COMP = "Compuesta";
+	public static final String COD_BASICA_CASILLA_TEXTO = "Texto largo";
+	public static final String COD_BASICA_CASILLA_BINARIA = "Imagen";
+
+	public static final String COD_BASICA_CASILLA_TIPO_NUMERO = "1";
+	public static final String COD_BASICA_CASILLA_TIPO_ALFANUM = "2";
+	public static final String COD_BASICA_CASILLA_TIPO_FECHA = "3";
+	public static final String COD_BASICA_CASILLA_TIPO_LOGICO = "4";
+	public static final String COD_BASICA_CASILLA_TIPO_TEXTO_VARIABLE = "5";
+	public static final String COD_BASICA_CASILLA_TIPO_SUGG_BOX = "10";
+
+	public static final String COD_BASICA_CASILLA_TIPO_DATO_IMPORTE = "1";
+	public static final String COD_BASICA_CASILLA_TIPO_DATO_DECIMAL = "2";
+
+	public static final String FORMATO_FECHA_DD_MM_YYYY = "dd/MM/yyyy";
+	public static final String FORMATO_FECHA_DD_MM_YYYY_HH_MM_SS = "dd/MM/yyyy HH:mm:ss.S";
+	public static final String FORMATO_FECHA_DD_MM_YYYY_GUIONES = "dd-MM-yyyy";
+	public static final String FORMATO_FECHA_YYYY_MM_DD_GUIONES = "dd-MM-yyyy";
+	public static final String FORMATO_FECHA_DD_MM_YYYY_HH_MM_SS_GUIONES = "dd-MM-yyyy HH:mm:ss";
+	public static final String FORMATO_FECHA_YYYY_MM_DD_HH_MM_SS_GUIONES = "yyyy-MM-dd HH:mm:ss";
+	public static final String FORMATO_FECHA_YYYY_MM_DD = "yyyy-MM-dd";
+
+	public static final Long VALOR_DOMINIO_CASILLA = 535l;
+
+	public static final int UBICACION_CABECERA = 528;
+	public static final int UBICACION_CUERPO = 530;
+	public static final int UBICACION_PIE = 529;
+
+	public static final String CADENA_VACIA = "";
+
+	public static final String CIFRADO_CLAVE_CSV = "((((CuatrO4ParentesiS))))";
+
+	public static final String VG_RUTA_ABS_DOCS_WINDOWS = "rutaAbsolutaDocumentosW";
+	public static final String VG_RUTA_ABS_DOCS_LINUX = "rutaAbsolutaDocumentosL";
+	public static final String VG_GARBAGE_COLECTOR_ACTIVATE = "activarRecolectorBasura";
+
+	public static final String ABREV_ANAGRAMA_BUSQ_ALREZ = "ALREZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_ALREZ_L = "ALVAREZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_DGUEZ = "DGUEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_DGUEZ_L = "DOMINGEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_FDEZ = "FDEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_FEDEZ = "FEDEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_FDEZ_L = "FERNANDEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_GLEZ = "GLEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_GLEZ_L = "GONZALEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_GRREZ = "GRREZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_GRREZ_L = "GUITIERREZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_HDEZ = "HDEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_HDEZ_L = "HERNANDEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_JNEZ = "JNEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_JNEZ_L = "JIMENEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_MNEZ = "MNEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_MNEZ_L = "MENENDEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_RGUEZ = "RGUEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_RGUEZ_L = "RODRIGUEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_SCHAZ = "SCHAZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_SCHAZ_L = "SANCHEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_VQUEZ = "VQUEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_VQUEZ_L = "VAZQUEZ";
+	public static final String ABREV_ANAGRAMA_BUSQ_FCO = "FCO";
+	public static final String ABREV_ANAGRAMA_BUSQ_FCO_L = "FRANCISCO";
+
+	public static final String EXCEPCION_Y = "Y";
+	public static final String EXCEPCION_DE = "DE";
+	public static final String EXCEPCION_LA = "LA";
+	public static final String EXCEPCION_DEL = "DEL";
+	public static final String EXCEPCION_EL = "EL";
+	public static final String EXCEPCION_LOS = "LOS";
+	public static final String EXCEPCION_LAS = "LAS";
+	public static final String EXCEPCION_AL = "AL";
+	public static final String EXCEPCION_UN = "UN";
+	public static final String EXCEPCION_I = "I";
+	public static final String EXCEPCION_SA = "SA";
+	public static final String EXCEPCION_SL = "SL";
+	public static final String EXCEPCION_SOC = "SOC";
+	public static final String EXCEPCION_LTDA = "LTDA";
+	public static final String EXCEPCION_SAT = "SAT";
+	public static final String EXCEPCION_CIA = "CIA";
+	public static final String EXCEPCION_ASOC = "ASOC";
+	public static final String EXCEPCION_COOP = "COOP";
+	public static final String EXCEPCION_SAE = "SAE";
+	public static final String EXCEPCION_SC = "SC";
+	public static final String EXCEPCION_SCL = "SCL";
+	public static final String EXCEPCION_SDAD = "SDAD";
+	public static final String EXCEPCION_SRC = "SRC";
+	public static final String EXCEPCION_CB = "CB";
+	public static final String EXCEPCION_CDAD = "CDAD";
+	public static final String EXCEPCION_COMPANIA = "COMPA�IA";
+	public static final String EXCEPCION_LIMITADA = "LIMITADA";
+	public static final String EXCEPCION_ASOCIACION = "ASOCIACION";
+	public static final String EXCEPCION_COOPERATIVA = "COOPERATIVA";
+	public static final String EXCEPCION_BIENES = "BIENES";
+	public static final String EXCEPCION_COMUNIDAD = "COMUNIDAD";
+	public static final String EXCEPCION_HNOS = "HNOS";
+	public static final String EXCEPCION_PROPIETARIOS = "PROPIETARIOS";
+
+	public static final String CADENA_DOS_CEROS = "00";
+	public static final String CADENA_CUATRO_CEROS = "0000";
+
+	public static final int NUMERO_CERO = 0;
+	public static final double NUMERO_CERO_DOUBLE = 0;
+	public static final long NUMERO_CERO_LONG = 0;
+	public static final int NUMERO_UNO_int = 1;
+	public static final int NUMERO_DOS = 2;
+	public static final int NUMERO_TRES = 3;
+	public static final int NUMERO_CUATRO = 4;
+	public static final int NUMERO_CINCO = 5;
+	public static final int NUMERO_SEIS = 6;
+	public static final int NUMERO_SIETE = 7;
+	public static final int NUMERO_OCHO = 8;
+	public static final int NUMERO_NUEVE = 9;
+	public static final int NUMERO_DIEZ = 10;
+	public static final int NUMERO_ONCE = 11;
+	public static final int NUMERO_DOCE = 12;
+	public static final int NUMERO_TRECE = 13;
+	public static final int NUMERO_CATORCE = 14;
+	public static final int NUMERO_QUINCE = 15;
+	public static final int NUMERO_DIECISEIS = 16;
+	public static final int NUMERO_DIECISIETE = 17;
+	public static final int NUMERO_DIECINUEVE = 19;
+	public static final int NUMERO_VEINTE = 20;
+	public static final int NUMERO_VEINTIUNO = 21;
+	public static final int NUMERO_VEINTIDOS = 22;
+	public static final int NUMERO_VEINTITRES = 23;
+	public static final int NUMERO_VEINTICUATRO = 24;
+	public static final int NUMERO_VEINTICINCO = 25;
+	public static final int NUMERO_TREINTA = 30;
+	public static final int NUMERO_TREINTA_UNO = 31;
+	public static final int NUMERO_TREINTA_DOS = 32;
+	public static final int NUMERO_TREINTA_OCHO = 38;
+	public static final int NUMERO_CINCUENTA_Y_TRES = 53;
+	public static final int NUMERO_OCHENTA_Y_NUEVE = 89;
+	public static final int NUMERO_CIEN = 100;
+	public static final int NUMERO_MIL = 1000;
+	public static final int NUMERO_DIEZMIL = 10000;
+	public static final int NUMERO_NOVENTA = 90;
+	public static final int NUMERO_NOVENTA_Y_DOS = 92;
+	public static final int NUMERO_NOVENTA_Y_TRES = 93;
+	public static final int NUMERO_NOVENTA_Y_CUATRO = 94;
+	public static final int NUMERO_NOVENTA_Y_CINCO = 95;
+	public static final int NUMERO_NOVENTA_Y_NUEVE = 99;
+	public static final int NUMERO_NOVENCIENTOS_NOVENTA_Y_NUEVE = 999;
+	public static final Integer VALOR_FINAL_SECUENCIAL = 99999999;
+	public static final String LETRA_A = "A";
+	public static final String LETRA_I = "I";
+	public static final String LETRA_D = "D";
+	public static final String LETRA_P = "P";
+	public static final String LETRA_S = "S";
+	public static final String LETRA_Z = "Z";
+	public static final String LETRA_V = "V";
+	public static final String RANGO_CASILLA_CABECERA = "desde 001 a 031";
+	public static final String RANGO_CASILLA_CUERPO = "desde 032-089 * desde 100-999";
+	public static final String RANGO_CASILLA_PIE = "desde 090 a 099";
+
+	public static final String INICIO_PARENTESIS = "(";
+	public static final String FIN_PARENTESIS = ")";
+	public static final String INICIO_LLAVE = "{";
+	public static final String FIN_LLAVE = "}";
+
+	public static final String INICIO_CORCHETE = "[";
+	public static final String FIN_CORCHETE = "]";
+	public static final String RETORNO_CARRO = "\r\n";
+
+	public static final String DOBLE_SALTO_LINEA = "\\n";
+	public static final String SALTO_LINEA = "\n";
+	public static final String DOBLE_TABULADOR = "\\t";
+	public static final String TABULADOR = "\t";
+	public static final String SIMBOLO_NEGATIVO = "-";
+
+	public static final String SEPARACION_LABEL = " - ";
+	public static final String SEPARACION_LABELITEM = ",";
+	public static final String SEPARACION_PIPELINE = "|";
+
+	public static final String REGEX_PIPELINE = "\\|";
+	public static final String REGEX_MSG = "(msg\\[')[\\w._]*('\\])";
+	public static final String REGEX_VALUE = "(#\\{)[\\w._]*(\\})";
+	public static final String PARENTESIS = "()";
+	public static final String PUNTO = ".";
+	public static final String METODO_TOSTRING = "toString()";
+	public static final String METODO_GETID = "getId()";
+	public static final String CODIFICACION_UFT8 = "UTF-8";
+
+	public static final String CONTENT_TYPE_PDF = "application/pdf";
+	public static final String CONTENT_TYPE_ODT = "application/vnd.oasis.opendocument.text";
+	public static final String CONTENT_TYPE_XLS = "application/ms-excel";
+	public static final String CONTENT_TYPE_ODS = "application/vnd.oasis.opendocument.spreadsheet";
+	public static final String CONTENT_TYPE_XML = "text/xml";
+	public static final String CONTENT_TYPE_CSV = "text/csv";
+	public static final String CONTENT_TYPE_RTF = "application/rtf";
+	public static final String CONTENT_TYPE_HTML = "text/html";
+	public static final String CONTENT_TYPE_DOC = "application/msword";
+	public static final String CONTENT_TYPE_TXT = "text/plain";
+
+	/**
+	 * Constantes para el combo generico
+	 */
+
+	public static final String SPLIT_WHERE = ";";
+
+	public static final String REGEX_PARENTESIS = "(\\()[^(,^)]*(\\))";
+
+	public static final String REGEX_MATCHES_OPERADOR_AND = "(.)*(AND|\\|)(.)*";
+
+	public static final String REGEX_MATCHES_OPERADOR_OR = "(.)*(OR)(.)*";
+
+	public static final String SPLIT_OPERADORES = "(=)|(!=)|(<=)|(<)|(>=)|(>)|(like)|(is not null)|(is null)|(or)|(and)";
+
+	public static final String SPLIT_OPERADORES_OK = "<=|<|>=|>|==|!=|<>|IS NOT NULL|IS NULL|AND|OR";
+
+	public static final String OPERADOR_IS_NULL_UPPER = "IS NULL";
+
+	public static final String OPERADOR_IS_NOT_NULL_UPPER = "IS NOT NULL";
+
+	public static final String OPERADOR_AND = "AND";
+
+	public static final String OPERADOR_OR = "OR";
+
+	public static final String SPLIT_CONDICIONES = " (AND) | (OR) | (\\|)";
+
+	public static final String OPERADOR_IGUAL = "=";
+
+	public static final String OPERADOR_IGUAL_IGUAL = "==";
+
+	public static final String OPERADOR_DISTINTO = "!=";
+
+	public static final String OPERADOR_DISTINTO_ALTER = "<>";
+
+	public static final String OPERADOR_MAYOR = ">";
+
+	public static final String OPERADOR_MAYOR_IGUAL = ">=";
+
+	public static final String OPERADOR_MENOR = "<";
+
+	public static final String OPERADOR_MENOR_IGUAL = "<=";
+
+	public static final String OPERADOR_LIKE = "like";
+
+	public static final String OPERADOR_IS_NULL = "is null";
+
+	public static final String Operador_IS_NOT_NULL = "is not null";
+
+	public static final String PORCENTAJE = "%";
+
+	public static final String DOS_PUNTOS = ":";
+
+	public static final String BARRA = "/";
+
+	public static final String COMA = ",";
+
+	public static final String OPERACION_SUMA = "SUMA";
+
+	public static final String OPERACION_RESTA = "RESTA";
+
+	public static final String OPERACION_DIVISION = "DIVISION";
+
+	public static final String OPERACION_MULTIPLI = "MULTIPLI";
+
+	public static final String MAS = "+";
+
+	public static final String POR = "*";
+
+	public static final String CHAR_CERO = "0";
+	public static final String CHAR_UNO = "1";
+	public static final String CHAR_DOS = "2";
+	public static final String CHAR_TRES = "3";
+	public static final String CHAR_CUATRO = "4";
+	public static final String CHAR_CINCO = "5";
+	public static final String CHAR_SEIS = "6";
+	public static final String CHAR_SIETE = "7";
+	public static final String CHAR_OCHO = "8";
+	public static final String CHAR_VEINTE = "20";
+
+	public static final String CADENA_STRING = "String";
+	public static final String CADENA_DATE = "Date";
+
+	/**
+	 * Formato para valores importes.
+	 */
+	public static final String FORMATO_IMPORTE = "###,###,###,##0.00";
+	/**
+	 * Formato para valores de volúmenes u otras magnitudes con 3 decimales.
+	 */
+	public static final String FORMATO_VOLUMENES = "##,###,###,##0.000";
+
+	public static final String POSTAL = "postal";
+	public static final String VARON = "Varón";
+	public static final String MUJER = "Mujer";
+	public static final String LETRA_M = "M";
+	public static final String LETRA_F = "F";
+	public static final String MASCULINO = "Masculino";
+	public static final String FEMENINO = "Femenino";
+
+	/**
+	 * Nombre de la tabla documentos
+	 */
+	public static final String TABLA_DOCUMENTOS = "eys_documentos";
+
+	public static final String RUTA_COM_CESEX_DEHESA = "com.cesex.dehesa";
+	public static final String RUTA_ES_GPEX_GOBEX = "es.gpex.gobex";
+	public static final String RUTA_ES_GPEX_SECTI = "es.gpex.secti";
+
+	/** Constantes para el inteprete de python **/
+
+	public static final String NOMBRE_VARIABLE = "variable";
+	public static final String NOMBRE_RESULT_SIZE = "resultSize";
+	public static final String NOMBRE_LISTA_PYTHON = "listaPython";
+
+	public static final String NOMBRE_VARIABLE_MSG_ERROR = "mensajeErrorSalida";
+	public static final String NOMBRE_PARAM_SESS_VARIABLE_MSG_ERROR = "pythonMsgCustomMsgError";
+	public static final String REGEX_VARIABLE = "\\$P\\{[\\w.]+(\\}){1}";
+	public static final String REGEX_SQL = "\\$SQL\\{(.)*\\}";
+	public static final String REGEX_CAMPOS = "\\$C\\{[\\w]+(\\}){1}";
+	public static final String REGEX_FIELDS = "\\$F\\{[\\w.]+(\\}){1}";
+	public static final String REGEX_SALIDA = "\\$S\\{[\\w]+(\\}){1}";
+	public static final String REGEX_MSG_ERROR = "\\$ERR\\{[\\w]+(\\}){1}";
+	public static final String REGEX_COD_TERRITORIAL = "\\$CT\\{[\\w]+(\\}){1}";
+	public static final String REGEX_COD_EXENCION = "\\$EX\\{[\\w]+(\\}){1}";
+	public static final String REGEX_RUE = "\\$RUE\\{[\\w]+(\\}){1}";
+
+	public static final String METODO_SET = "set";
+	public static final String METODO_GET = "get";
+
+	public static final String DOLAR_PORCENT = "$%";
+
+	public static final String DOLAR_SIMPLE = "$";
+
+	public static final String TIPO_VO = "VO";
+
+	public static final String SEPARACION_METODOS = "\\.";
+
+	public static final String DOBLE_BACKSLACK = "\\";
+
+	public static final String SUBSTITUCION_SQL = "#SQL LISTADO";
+
+	/**
+	 * Valor para inicializar el primer elemento del combo "" : ...
+	 */
+	public static final String VALOR_INICIAL_COMBO = "";
+	public static final String VALOR_INICIAL_CERO = "0";
+	public static final String VALOR_INICIAL_VACIO = "";
+	public static final String LABEL_INICIAL_COMBO = "...";
+	public static final String PASO = "Paso";
+
+	public static final String COD_BASICA_TIPO_ARGUMENTO_PARAMETRO = "1";
+	public static final String COD_BASICA_TIPO_ARGUMENTO_CONSTANTE = "2";
+	public static final String COD_BASICA_TIPO_ARGUMENTO_PASO_ANTERIOR = "3";
+	public static final String COD_BASICA_TIPO_ARGUMENTO_CASILLA = "4";
+	public static final String COD_BASICA_TIPO_ARGUMENTO_FORMULA = "5";
+
+	public static final Long CASILLA_IMPORTE = 535l;
+	public static final String CASILLA_IMPORTE_COD_BASICA = "1";
+
+	public static final Long CASILLA_DECIMAL = 536l;
+	public static final String CASILLA_DECIMAL_COD_BASICA = "2";
+
+	public static final String PASO_POSICION_INICIAL = "posIni";
+	public static final String PASO_POSICION_FINAL = "posFin";
+	public static final String PASO_TIPO_ARGUMENTO = "codTipo";
+	public static final String PASO_VALOR_SELECCIONADO = "valorSelecc";
+	public static final String PASO_NUM_ORDEN = "numOrden";
+	public static final String PASO_NOMBRE_ARGUMENTO = "nomArg";
+
+	public static final String EXTENSION_XML = ".xml";
+	public static final String EXTENSION_JSPX = ".jspx";
+	public static final String EXTENSION_XHTML = ".xhtml";
+	public static final String EXTENSION_PDF = ".pdf";
+	public static final String EXTENSION_ZIP = ".zip";
+	public static final String EXTENSION_JASPER = ".jasper";
+	public static final String EXTENSION_JRXML = ".jrxml";
+	public static final String EXTENSION_ODT = ".odt";
+	public static final String EXTENSION_XLS = ".xls";
+	public static final String EXTENSION_ODS = ".ods";
+	public static final String EXTENSION_CSV = ".csv";
+	public static final String EXTENSION_HTML = ".html";
+	public static final String EXTENSION_FIRMADO = "_FIRMADO";
+	public static final String PREFIJO_XML_JSPX = "xhtml";
+	public static final String SEPARADOR = "xhtml";
+	public static final String BARRA_BAJA = "_";
+	public static final String XML_PA = "PA";
+	public static final String RESPONSE_HEAD = "Content-Disposition";
+	public static final String RESPONSE_HEAD_VALOR = "attachment; filename=\"";
+
+	public static final String SEDE_CAS_NUM_DOC = "0";
+	public static final String SEDE_CAS_RUE = "1";
+	public static final String SEDE_CAS_ANOTACIONES = "2";
+
+	public static final String SEDE_CAS_NRO_REGISTRO = "10";
+	public static final String SEDE_CAS_LIBRO_REGISTRO = "11";
+	public static final String SEDE_CAS_FECHA_REGISTRO = "12";
+	public static final String SEDE_CAS_PROC_OTRA_ADM = "13";
+	public static final String SEDE_CAS_NUM_REG_ORIG = "14";
+	public static final String SEDE_CAS_FEC_REG_ORIG = "15";
+	public static final String SEDE_CAS_REF_ARCHIVA = "16";
+
+	public static final String SEDE_CAS_INTERESA_ID = "20";
+	public static final String SEDE_CAS_INTERESA_NIF = "21";
+	public static final String SEDE_CAS_INTERESA_PRIMER_APELLIDO = "22";
+	public static final String SEDE_CAS_INTERESA_SEGUNDO_APELLIDO = "23";
+	public static final String SEDE_CAS_INTERESA_NOMBRE = "24";
+	public static final String SEDE_CAS_INTERESA_TIPO_VIA = "25";
+	public static final String SEDE_CAS_INTERESA_NOMBRE_VIA = "26";
+	public static final String SEDE_CAS_INTERESA_TIPO_NUMERACION = "27";
+	public static final String SEDE_CAS_INTERESA_NUMERO = "28";
+	public static final String SEDE_CAS_INTERESA_CALIF_NUMERICO = "29";
+	public static final String SEDE_CAS_INTERESA_BLOQUE = "30";
+	public static final String SEDE_CAS_INTERESA_PORTAL = "31";
+	public static final String SEDE_CAS_INTERESA_ESCALERA = "32";
+	public static final String SEDE_CAS_INTERESA_PLANTA = "33";
+	public static final String SEDE_CAS_INTERESA_PUERTA = "34";
+	public static final String SEDE_CAS_INTERESA_COMPL_DOMICILI = "35";
+	public static final String SEDE_CAS_INTERESA_LOCALIDAD = "36";
+	public static final String SEDE_CAS_INTERESA_MUNICIPIO = "37";
+	public static final String SEDE_CAS_INTERESA_PROVINCIA = "38";
+	public static final String SEDE_CAS_INTERESA_COD_POSTAL = "39";
+	public static final String SEDE_CAS_INTERESA_NACIONALIDAD = "40";
+	public static final String SEDE_CAS_INTERESA_TELEF_FIJO = "41";
+	public static final String SEDE_CAS_INTERESA_TELEF_MOVIL = "42";
+	public static final String SEDE_CAS_INTERESA_FAX = "43";
+	public static final String SEDE_CAS_INTERESA_EMAIL = "44";
+	public static final String SEDE_CAS_INTERESA_FEC_NACI = "45";
+	public static final String SEDE_CAS_INTERESA_SEXO = "46";
+	public static final String SEDE_CAS_INTERESA_ESTADO_CIVIL = "47";
+
+	public static final String SEDE_CAS_REPRESEN_ID = "55";
+	public static final String SEDE_CAS_REPRESEN_NIF = "56";
+	public static final String SEDE_CAS_REPRESEN_PRIMER_APELLIDO = "57";
+	public static final String SEDE_CAS_REPRESEN_SEGUNDO_APELLIDO = "58";
+	public static final String SEDE_CAS_REPRESEN_NOMBRE = "59";
+	public static final String SEDE_CAS_REPRESEN_TIPO_VIA = "60";
+	public static final String SEDE_CAS_REPRESEN_NOMBRE_VIA = "61";
+	public static final String SEDE_CAS_REPRESEN_TIPO_NUMERACION = "62";
+	public static final String SEDE_CAS_REPRESEN_NUMERO = "63";
+	public static final String SEDE_CAS_REPRESEN_CALIF_NUMERICO = "64";
+	public static final String SEDE_CAS_REPRESEN_BLOQUE = "65";
+	public static final String SEDE_CAS_REPRESEN_PORTAL = "66";
+	public static final String SEDE_CAS_REPRESEN_ESCALERA = "67";
+	public static final String SEDE_CAS_REPRESEN_PLANTA = "68";
+	public static final String SEDE_CAS_REPRESEN_PUERTA = "69";
+	public static final String SEDE_CAS_REPRESEN_COMPL_DOMICILI = "70";
+	public static final String SEDE_CAS_REPRESEN_LOCALIDAD = "71";
+	public static final String SEDE_CAS_REPRESEN_MUNICIPIO = "72";
+	public static final String SEDE_CAS_REPRESEN_PROVINCIA = "73";
+	public static final String SEDE_CAS_REPRESEN_COD_POSTAL = "74";
+	public static final String SEDE_CAS_REPRESEN_NACIONALIDAD = "75";
+	public static final String SEDE_CAS_REPRESEN_TELEF_FIJO = "76";
+	public static final String SEDE_CAS_REPRESEN_TELEF_MOVIL = "77";
+	public static final String SEDE_CAS_REPRESEN_FAX = "78";
+	public static final String SEDE_CAS_REPRESEN_EMAIL = "79";
+	public static final String SEDE_CAS_REPRESEN_FEC_NACI = "80";
+
+	public static final String SEDE_CAS_NOTIFICA_SEDE = "90";
+
+	public static final String SEDE_CAS_NOTIFICA_ID = "95";
+	public static final String SEDE_CAS_NOTIFICA_TIPO_VIA = "96";
+	public static final String SEDE_CAS_NOTIFICA_NOMBRE_VIA = "97";
+	public static final String SEDE_CAS_NOTIFICA_TIPO_NUMERACION = "98";
+	public static final String SEDE_CAS_NOTIFICA_NUMERO = "99";
+	public static final String SEDE_CAS_NOTIFICA_CALIF_NUMERICO = "100";
+	public static final String SEDE_CAS_NOTIFICA_BLOQUE = "101";
+	public static final String SEDE_CAS_NOTIFICA_PORTAL = "102";
+	public static final String SEDE_CAS_NOTIFICA_ESCALERA = "103";
+	public static final String SEDE_CAS_NOTIFICA_PLANTA = "104";
+	public static final String SEDE_CAS_NOTIFICA_PUERTA = "105";
+	public static final String SEDE_CAS_NOTIFICA_COMPL_DOMICILI = "106";
+	public static final String SEDE_CAS_NOTIFICA_LOCALIDAD = "107";
+	public static final String SEDE_CAS_NOTIFICA_MUNICIPIO = "108";
+	public static final String SEDE_CAS_NOTIFICA_PROVINCIA = "109";
+	public static final String SEDE_CAS_NOTIFICA_COD_POSTAL = "110";
+	public static final String SEDE_CAS_NOTIFICA_NACION = "111";
+
+	public static final String SEDE_CAS_FECH_PRESENTACION = "250";
+	public static final String SEDE_CAS_CSV = "251";
+	public static final String SEDE_CAS_ORGANO_CONSEJERIA = "252";
+	public static final String SEDE_CAS_ORGANO_DIRECCION = "253";
+
+	/**
+	 * StyleClass para ocultar un boton de la botonera.
+	 */
+	public static final String ESTILO_OCULTAR_BOTON = "botonOculto";
+
+	/**
+	 * StyleClass para un boton comun de la botonera.
+	 */
+	public static final String ESTILO_BOTON = "botonBotonera";
+
+	/**
+	 * StyleClass para un boton comun de la botonera.
+	 */
+	public static final String ESTILO_BOTON_ACTIVADO = "botonBotoneraActivado";
+
+	public static final String ACEPTAR = "Aceptar";
+
+	public static final String TABLA_DIV_BUSQUEDA = "div_busqueda";
+
+	/**
+	 * Id para el panel del contenido central, es <a4j:outputPanel
+	 */
+	public static final String PANEL_CONTENIDO_CENTRAL = "panelContenidoCentral";
+
+	/**
+	 * Status para mostrar "Cargando" al pulsar un boton a4j
+	 */
+	public static final String STATUS_MOSTRAR_WAIT = "mostrarWait";
+
+	public static final String RECARGAS_HIGHLIGHT = ",refrescarCampos";
+
+	public static final String METODO_ANIADIR = "goAlta";
+	public static final String METODO_ADD = "add";
+	public static final String METODO_UPDATE = "update";
+	public static final String METODO_DELETE = "delete";
+	public static final String METODO_FIND = "find";
+
+	public static final String METODO_SALIR = "goSalir";
+	public static final String METODO_SALIR_ALTA = "goSalirAlta";
+	public static final String METODO_SALIR_BORRANDO = "goSalirBorrando";
+	public static final String METODO_LIMPIAR_ALTA = "goLimpiarEnAlta";
+
+	public static final String ES_ANEXO_EDITABLE_LABEL = "esAnexoEditable";
+	public static final String PA_PREFIJO_CAS = "cas";
+	public static final String PA_SUBFIJO_CAS_SEC = "_sec";
+	public static final String PA_SUBFIJO_CAS_COMBO_ID = "_ids";
+
+	public static final String PARAMETRO_SESION_MODELO = "codModelo";
+	public static final String PARAMETRO_SESION_VERSION = "codVersion";
+
+	public static final String NOMBRE_MODELO = "Modelo";
+	public static final String CARPETA_MODELOS = "/modelos";
+	public static final String CARPETA_DOCUMENTOS = "/documentos";
+	public static final String ARCHIVO_MANIFEST = "/META-INF/MANIFEST.MF";
+
+	public static final String FORMATO_FECHA_COMPILACION = "dd/MM/yyyy HH:mm";
+
+	public static final String VO = "VO";
+	public static final String ID = ".id";
+	public static final String ID_ATRIBUTO = "id";
+	public static final String CAMPO_ID_BBDD = "ide";
+
+	public static final String NOMBRE_FORMULARIO = "formulario";
+
+	public static final String CONSTANTE_SI = "Si";
+	public static final String CONSTANTE_NO = "No";
+	public static final String BOOLEAN_FALSE = "false";
+	public static final String BOOLEAN_TRUE = "true";
+	
+	public static final String RUTA_DESARROLLO = "C:/AsistenteAGILE";
+	public static final String RUTA_PREPRO = "/var/www/asistente";
+	public static final String MOSTRAR_PROPERTIES = "abracadabra";
+
+	/**
+	 * Resto exacto por el cual no se realiza el complemento de la divisi�n para
+	 * obtener el d�gito de control.
+	 */
+	public static final Integer RESTO_EXACTO_EN_DC_RUE = 0;
+
+	/**
+	 * N�mero por el cual se divide para obtener el d�gito de control.
+	 */
+	public static final Integer NUM_DIV_DC_RUE = 7;
+
+	public static final String COD_BASICA_ARG_SALIDA_INTEGER = "01";
+	public static final String COD_BASICA_ARG_SALIDA_DECIMAL = "02";
+	public static final String COD_BASICA_ARG_SALIDA_DATE = "03";
+	public static final String COD_BASICA_ARG_SALIDA_STRING = "04";
+	public static final String COD_BASICA_ARG_SALIDA_BOOLEAN = "05";
+
+	/**
+	 * Variable de para el retorno de la ejecuci�n jython OK.
+	 */
+	public static final String OK = "ok";
+	/**
+	 * Variable de para el retorno de la ejecuci�n jython ERROR.
+	 */
+	public static final String ERROR = "error";
+
+	public static final String SIN_ERROR_ASOCIADO = "La validación no posee un número de error asociado";
+
+	public static final String FLASH_DATOSPROCEDIMIENTOJBPM = "datosProcedimientoJBPM";
+	public static final String FLASH_DATOS_ACCION_TRAMITE = "datosAccionTramite";
+
+	public static final String FLASH_SELECTED_ITEM = "selectedItem";
+	public static final String FLASH_EXP_ADMINS = "detalleExpedienteListaAdministrados";
+	public static final String FLASH_EXP_REPRES = "detalleExpedienteListaRepresentantes";
+	public static final String FLASH_EXP_ID_EXPEDIENTE = "detalleExpedienteIdExpediente";
+
+	public static final String JBPM_PARAMETRO_INPUT_TIPO_ACION = "tipoAccion";
+	public static final String JBPM_PARAMETRO_INPUT_URL = "url";
+	public static final String JBPM_PARAMETRO_INPUT_PLANTILLA_COD = "codPlantilla";
+	public static final String JBPM_PARAMETRO_INPUT_DOC_ADJUNTOS_COD = "codDocumentacion";
+	public static final String JBPM_PARAMETRO_INPUT_DOC_ADJUNTOS_PERMITE_OTROS = "permiteOtros";
+	public static final String JBPM_PARAMETRO_INPUT_DOC_ADJUNTOS_MAX_OTROS = "otrosMax";
+
+	public static final String JBPM_TIPO_ACCION_DOCUMENTO = "documento";
+	public static final String JBPM_TIPO_ACCION_FORM_URL = "formulario";
+	public static final String JBPM_TIPO_ACCION_DOC_ADJUNTO = "docAdjunto";
+
+	public static final String JBPM_VARIABLE_GLOBAL_CIP = "cip_propio";
+	public static final String JBPM_VARIABLE_GLOBAL_RUE = "rue";
+	public static final String JBPM_VARIABLE_GLOBAL_ID_EXP = "id_exp";
+
+	public static final String MENSAJE_JBPM_PROCEDIMIENTO_ABORTADO_CORRECTAMENTE = "mensaje.procedimiento.abort.correcto";
+
+	public static final String MENSAJE_JBPM_PROCEDIMIENTO_ABORTADO_ERROR = "mensaje.procedimiento.abort.error";
+	
+	public static final long MILLSECS_PER_DAY = 24 * 60 * 60 * 1000; //Milisegundos al día 
+	public static final long DIAS_MINIMOS = 365 * 18; //Dias persona 18 años
+	
+	public static final String CSS_ERROR = "ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all ui-state-error";
+	public static final String CSS_ERROR_AUTOCOMPLETE = "error-validacion";
+	public static final String CSS_CALENDAR_ERROR = "errorInputCalendar";
+	
+}

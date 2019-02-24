@@ -1,0 +1,12 @@
+package es.grapecheck.plataforma.persistencia.dao;
+
+import javax.ejb.LocalBean;
+import javax.inject.Named;
+
+import es.grapecheck.plataforma.persistencia.vo.ParcelasVO;
+
+@Named
+@LocalBean
+public class ParcelasDAO extends GenericDAOImpl<ParcelasVO>{
+
+}

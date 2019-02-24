@@ -1,0 +1,16 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<!-- luisma_nota: esto lo quitamos por que se muestra el loading siempre que existe un movimiento ajasx y eso no puede ser. Una Full -->
+<!--  <p:ajaxStatus onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()" /> -->
+ 
+<p:dialog id="waiter" widgetVar="statusDialog" modal="true" draggable="false" closable="false" resizable="false" showHeader="false" style="background: transparent !important;border: 0px !important;box-shadow: 0px 0px 0px rgba(0,0,0,0) !important;"  styleClass="waiter"  >
+	<p:graphicImage library="imagenes" name="loading.gif"/>
+</p:dialog>
+ 
+
+</html>

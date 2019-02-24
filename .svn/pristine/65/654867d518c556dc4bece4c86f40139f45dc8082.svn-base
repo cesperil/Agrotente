@@ -1,0 +1,45 @@
+package es.grapecheck.plataforma.negocio.service;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.inject.Inject;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import es.grapecheck.plataforma.persistencia.dao.ParcelasDAO;
+import es.grapecheck.plataforma.persistencia.exception.PersistenciaException;
+import es.grapecheck.plataforma.persistencia.vo.ParcelasVO;
+import es.grapecheck.plataforma.persistencia.vo.UsuarioVO;
+
+@Stateless
+@LocalBean
+public class ParcelasService {
+
+	private static final Logger LOG = LoggerFactory.getLogger(ParcelasService.class);
+	
+	@Inject
+	private ParcelasDAO parcelasDAO;
+
+	public ParcelasDAO getParcelasDAO() {
+		return parcelasDAO;
+	}
+
+	public void setParcelasDAO(ParcelasDAO parcelasDAO) {
+		this.parcelasDAO = parcelasDAO;
+	}
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public void addParcelas(ParcelasVO parcelasVO) throws PersistenciaException {
+		getParcelasDAO().create(parcelasVO);
+	}
+	
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public void updateParcelas(ParcelasVO parcelasVO) throws PersistenciaException {
+		getParcelasDAO().update(parcelasVO);
+	}
+	
+}

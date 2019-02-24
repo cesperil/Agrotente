@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>Agrotente</display-name>
+	<description></description>
+	<context-param>
+		<param-name>javax.faces.PROJECT_STAGE</param-name>
+		<param-value>Development</param-value>
+	</context-param>
+	<context-param>
+		<param-name>facelets.LIBRARIES</param-name>
+		<param-value>/WEB-INF/componentes-taglib.xml</param-value>
+	</context-param>
+	
+	<!--luisma. El sufijo de mis paginas va a ser *.xhtml. Aunque este es el valor por defecto de jsf 2.0 
+	<context-param>  
+   		<param-name>javax.faces.DEFAULT_SUFFIX</param-name>  
+   		<param-value>.xhtml</param-value>  
+ 	</context-param>
+ 	-->
+ 	
+ 	<!-- rsanchez_doc Para poder usar f:convertDateTime Ej: consultaExpediente.xhtml etiqueta f:convertDateTime -->
+ 	<context-param>
+	    <param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>
+	    <param-value>true</param-value>
+	</context-param>
+	<!-- rsanchez_doc Parámetro para aplicar tema a primefaces -->
+	<context-param>
+		<param-name>primefaces.THEME</param-name>
+		<param-value>south-street</param-value>
+	</context-param>
+	
+	<context-param>
+	  <param-name>primefaces.UPLOADER</param-name>
+	  <param-value>commons</param-value>
+	</context-param>
+	
+	
+	
+	
+	<!-- rsanchez 20151119 parametro de contexto desde el cual invocamos al dozerBeanMapping 
+	comentado ya que esta mal configurado, pendiente ver como se invoca dozer desde ejb3
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+             <param-value>/WEB-INF/application-context-gestor.xml</param-value>
+	</context-param>
+	-->
+	
+	
+	
+	<!-- rsanchez 20151112 characterEncodingFilter mediante esta etiqueta estamos forzando a que los datos de la request venga en UTF-8 -->
+	<filter>
+		<filter-name>characterEncodingFilter</filter-name>
+		<filter-class>es.grapecheck.plataforma.utiles.CharacterEncodingFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>characterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Filtro Seguridad -->	
+	<filter>
+		<filter-name>FiltroSeguridad</filter-name>
+		<filter-class>es.grapecheck.plataforma.webaction.seguridad.FiltroSeguridad</filter-class>
+		<init-param>
+			<param-name>excludePatterns</param-name>
+			<param-value>/login.xhtml:/resources/:/javax.faces.resource/</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>FiltroSeguridad</filter-name>
+		<url-pattern>*.xhtml</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+		
+	</filter-mapping>
+	
+ 	<filter>
+    <filter-name>PrimeFaces FileUpload Filter</filter-name>
+    <filter-class>
+               org.primefaces.webapp.filter.FileUploadFilter
+    </filter-class>
+	<init-param>
+	      <param-name>thresholdSize</param-name>
+          <param-value>51200</param-value>
+  	</init-param>
+<!--No es necesario esto se usa para indicarle la ruta temporal de descarga si no le indicamos ninguna cogera la que tenga por defecto, en cada servidor
+    <init-param>
+	   <param-name>uploadDirectory</param-name> 
+       <param-value>C:\AsistenteAGILE</param-value> 
+  </init-param>-->
+  
+  </filter>
+  <filter-mapping>
+    <filter-name>PrimeFaces FileUpload Filter</filter-name>
+    <servlet-name>Faces Servlet</servlet-name>
+  </filter-mapping>
+	
+	
+	
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+	</servlet>
+
+	
+	<!-- Le estoy indicando que en la peticiones de url le tenemos que poner  *.jsf o *.xhtml o lo que queramos  -->
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+<!-- 		<url-pattern>*.jsf</url-pattern> -->
+ 		<url-pattern>*.xhtml</url-pattern>
+
+	</servlet-mapping>
+	
+	<error-page>
+      <error-code>403</error-code>
+      <location>/error.xhtml</location>
+   </error-page>
+   
+   <error-page>
+      <error-code>503</error-code>
+      <location>/error.xhtml</location>
+   </error-page>
+   
+   
+   <error-page>
+      <error-code>404</error-code>
+      <location>/error.xhtml</location>
+   </error-page>
+   
+   <error-page>
+      <error-code>500</error-code>
+      <location>/error.xhtml</location>
+   </error-page>
+   
+	<error-page>
+    <exception-type>java.lang.Throwable</exception-type>
+    	<location>/error.xhtml</location>
+	</error-page>
+	
+	<error-page>
+    	<exception-type>javax.faces.application.ViewExpiredException</exception-type>
+    	<location>/login.xhtml</location>
+	</error-page>
+	
+	<error-page>
+    	<exception-type>java.io.FileNotFoundException</exception-type>
+    	<location>/error</location>
+	</error-page>
+	
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error</location>
+	</error-page>
+	
+	<!-- lmpaz. prueba redirigir error  
+	<error-page>
+	 <exception-type>javax.servlet.ServletException</exception-type>
+     <location>/error.xhtml</location>
+	<error-page>
+	-->
+	
+	<welcome-file-list>
+		<welcome-file>login.xhtml</welcome-file>
+	</welcome-file-list>
+	
+	<error-page>
+   	 <location>/login.xhtml</location>
+	</error-page>
+	
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+	
+	<mime-mapping>
+        <extension>ico</extension>
+        <mime-type>image/x-icon</mime-type>
+    </mime-mapping>
+</web-app>

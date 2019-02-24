@@ -1,0 +1,101 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<f:view>
+		<h:head>
+			<f:loadBundle var="msg" basename="mensajes" />
+			<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+
+			<h:outputScript library="js" name="funcionesComunes.js" />
+			<h:outputScript library="js" name="calendar_es.js" />
+			<h:outputScript library="js" name="required.js" />
+			
+			<title>AgroTente</title>
+			<!--  <link rel="shortcut icon" type="image/x-icon" href="#{resource['imagenes:logo.jpg']}"/>--> 
+
+				
+				<!-- <div id="ruta" class="ruta">
+				<ui:fragment>
+					<ui:insert name="ruta" />
+				</ui:fragment>
+			</div>
+ -->
+
+
+		</h:head>
+		<h:body>
+			<h:outputStylesheet library="css" name="estilo.css" target="head" />
+
+			<ui:fragment>
+				<ui:include src="header.xhtml" />
+			</ui:fragment>
+			
+			<!--  <div id="titulo" class="ui-datatable-header ui-widget-header ui-corner-top">
+				<ui:fragment>
+					<ui:insert name="titulo" />
+				</ui:fragment>
+			</div> -->
+			<!-- rsanchez_doc growl para mostrar todos los mensajes en la aplicacion, la idea es tener este unico growl, x eso esta fuera del formulario, para actualizarlo desde cualquier elemeneto ->  :growlPrincipal     <-   
+			     20151111 cambiado rendered a false para que no se muestre en pantlla el mensaje, solo se ponga el campo en rojo. con showDetail a true muestra en el mensaje otro mas detallado      -->
+			<!-- para que se oculten automaticamente los mensajes a los 2 seg: sticky="false" life="2000"  -->
+			<p:growl id="growlPrincipal" redisplay="false" 
+				severity="info, fatal, warn, error" rendered="true"
+				showSummary="true" 
+				showDetail="true"  sticky="true" escape="false"/>
+			
+			
+			<h:form id="formulario" enctype="multipart/form-data">
+				<!-- luisma_pendiente:quitar este componente 
+				<ui:fragment>
+					<ui:include src="mensajesPopup.xhtml" />
+				</ui:fragment>
+				-->
+ 				<ui:include src="mensajeWait.xhtml" />
+ 
+ 				
+				<p:panel id="botonera" styleClass="sticky-menu">
+					<ui:fragment>
+						<ui:insert name="botonera"/>
+					</ui:fragment>
+				</p:panel>
+				
+				<p:sticky target="botonera" ></p:sticky>
+				
+				<script type="text/javascript">
+					$(document).scroll(function() {
+						  var y = $(this).scrollTop();
+						  if (y > 100) {
+						    $('.logo-botonera').fadeIn();
+						    $('#foot').fadeOut();
+						  } else {
+						    $('.logo-botonera').fadeOut();
+						    $('#foot').fadeIn();
+						  }
+						});
+				</script>
+				
+				<div id="subtitulo" class="ui-datatable-header ui-widget-header ui-corner-top">
+					<ui:fragment>
+						<ui:insert name="subtitulo" />
+					</ui:fragment>
+				</div>
+ 				<p:panel id="panelContenidoCentral" styleClass="containerGeneral"> 
+					<div id="contenidoCentral" name="contenidoCentral">
+						<ui:fragment>
+							<ui:insert name="content" />
+						</ui:fragment>
+					</div>
+ 				</p:panel>
+			</h:form>
+			
+			<ui:fragment>
+				<ui:include src="foot.xhtml" />
+			</ui:fragment>
+			
+		</h:body>
+	</f:view>
+
+</ui:composition>

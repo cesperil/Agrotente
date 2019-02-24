@@ -1,0 +1,32 @@
+package es.grapecheck.plataforma.persistencia.dao;
+
+import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.inject.Named;
+
+import es.grapecheck.plataforma.persistencia.vo.ParcelasVO;
+import es.grapecheck.plataforma.persistencia.vo.UsuarioVO;
+import es.grapecheck.plataforma.utiles.TratamientoDeDatos;
+
+@Named
+@LocalBean
+public class ParcelasDAO extends GenericDAOImpl<ParcelasVO>{
+
+	/**
+	 * cesperilla 27/01/2017 consulta parcelas by ide usuario
+	 * @param usuarioVO
+	 * @return
+	 */
+	public List<ParcelasVO> getParcelasByUsuario(UsuarioVO usuarioVO){
+		
+		ParcelasVO parcelaVO = new ParcelasVO();
+		
+		List<ParcelasVO> lista = (List<ParcelasVO>) listarHQL("select p from ParcelasVO p where p.fkIdeUsuario = " + usuarioVO.getId());
+		
+		return lista;
+		
+	}
+
+	
+}

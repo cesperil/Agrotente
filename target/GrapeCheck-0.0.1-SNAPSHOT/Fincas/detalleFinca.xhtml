@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	
+	<ui:define name="botonera">
+		<component:botonera bean="#{detalleFincasBean}" /> 
+	</ui:define>
+	<ui:define name="content">
+	
+	<p:fieldset legend="Localización de Fincas">
+    	<pe:fluidGrid id="fgDatosLocalizacion" resizeBound="true" hGutter="20" widgetVar="fluidGridWdgt">
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Nombre de parcela" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.nombre}" label="Nombre de parcela" id="nombreParcela" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+	    	<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Numero Parcela" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.parcela}" label="Numero Parcela" id="numeroParcela" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Numero poligono" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.poligono}" label="Numero poligono" id="numeroPoligono" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Codigo Municipio" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.cod_municipio}" label="Codigo Municipio" id="codigoMunicipio" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Latitud" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.latitud}" label="Latitud" id="latitudParcela" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Longitud" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.longitud}" label="Longitud" id="nombreLongitud" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+	    	
+    	</pe:fluidGrid>
+    </p:fieldset>
+    
+    <p:fieldset toggleable="true" legend="Datos" style="margin-bottom:20px" rendered="#{not empty detalleFincasBean.listaSensores}">
+        <p:panelGrid columns="2" style="width:100%;margin:10px 10px 10px 10px" columnClasses="label,value"  styleClass="ui-panelgrid-blank">
+           <p:panelGrid columns="2" style="width:100%;margin:10px 10px 10px 10px" columnClasses="label,value"  styleClass="ui-panelgrid-blank">
+            <h:outputText value="Temperatura Maxima" />
+            <h:outputText value="24" />
+ 
+            <h:outputText value="Temperatura Minima" />
+            <h:outputText value="23" />
+            
+           	<h:outputText value="Temperatura Actual" />
+            <h:outputText value="24" />
+           </p:panelGrid> 
+           <p:panelGrid columns="2" style="width:100%;margin:10px 10px 10px 10px" columnClasses="label,value"  styleClass="ui-panelgrid-blank">
+            <h:outputText value="Temperatura Maxima" />
+            <h:outputText value="24" />
+ 
+            <h:outputText value="Temperatura Minima" />
+            <h:outputText value="23" />
+            
+           	<h:outputText value="Temperatura Actual" />
+            <h:outputText value="24" />
+           </p:panelGrid> 
+        </p:panelGrid>
+        <h:panelGrid columns="2" columnClasses="left,right" style="width:100%">
+    		<p:chart type="line" model="#{detalleFincasBean.dateModel}" style="height:400px;"/>
+    
+		</h:panelGrid>
+	</p:fieldset> 
+    
+    <p:fieldset toggleable="true"  legend="Sensores" style="margin-bottom:20px" rendered="#{not empty detalleFincasBean.listaSensores}">
+	<p:carousel value="#{detalleFincasBean.listaSensores}"  headerText="Resultados" var="tipoSensor" itemStyle="text-align:center; color:white;" responsive="true">
+        <p:panelGrid columns="2" style="width:100%;margin:10px 10px" columnClasses="label,value"  styleClass="ui-panelgrid-blank">
+            <h:outputText value="Nombre:" />
+            <h:outputText value="#{tipoSensor.fkIdeTipoSensor.nombre}" />
+ 
+            <h:outputText value="Descripcion:" />
+            <h:outputText value="#{tipoSensor.fkIdeTipoSensor.descripcion}" />
+            
+           	<h:outputText value="Activo" />
+            <h:outputText value="#{tipoSensor.activo}" /> 
+        </p:panelGrid>
+    </p:carousel>
+	</p:fieldset> 
+	
+	<p:fieldset toggleable="true"  legend="Activadores" style="margin-bottom:20px" rendered="#{not empty detalleFincasBean.listaActivadores}">
+	
+		<p:dataTable var="activador" value="#{detalleFincasBean.listaActivadores}" >
+			<p:column headerText="Nombre">
+			        <h:outputText value="#{activador.alias}" />
+			</p:column>
+			<p:column headerText="Activo" width="10%">
+			        <h:outputText value="#{activador.estado eq 0 ? 'Inactivo' : 'Activo'}" />
+			</p:column>
+			<p:column headerText="" width="5%">	
+			        <h:commandLink value="#{activador.estado eq 0 ? 'Activar' : 'Desactivar'}" actionListener="#{altaDocumentoBean.descargarDocumento(documento)}" />
+			</p:column>
+	    </p:dataTable>
+	</p:fieldset> 
+          
+	</ui:define>
+      		  
+</ui:composition>
+</html>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+
+<ui:composition template="estructura/defaultLayoutPrincipal.xhtml">
+	<ui:define name="content"  >
+	
+
+	<h:form>
+	<f:view contentType="text/html">
+		<div id="body" align="center" >
+			<p:gmap id="gmap" center="38.8995, -6.374816" zoom="8" type="hybrid" style="width:100%;height:400px" />
+		</div>
+	</f:view>	
+	</h:form>
+	</ui:define>
+</ui:composition>
+
+
+
+</html>

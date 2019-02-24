@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html"
+       xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    
+<h:head>
+</h:head> 
+
+<h:body style="overflow: hidden;">
+<h:outputStylesheet library="css" name="estilo.css" target="head" />
+	
+    <!-- <h:form>
+	    <p:messages id="messages" autoUpdate="true" closable="true" />
+	</h:form> -->
+   
+   <h:form>
+   		<f:loadBundle var="msg" basename="mensajes" />
+   		<div id="wrap" style="width: 900px;
+		    height: auto;
+		    margin: auto;
+		    margin-top: 10%;">
+	   		<div id="bgContainer" style="    width: 900px;
+			    margin: auto;
+			    position: relative;">
+		   		<h:graphicImage library="imagenes" name="portada.jpg" style="width:900px; display:block; margin:auto;
+				    opacity: 0.5;
+				    bottom: -100px;
+				    left:0;
+				    z-index:-1;
+				    filter: blur(10px); 
+				  -webkit-filter: blur(10px); 
+				  -moz-filter: blur(10px);
+				  -o-filter: blur(10px);
+				  -ms-filter: blur(10px);"/>
+	  		</div>
+  		</div>
+		  
+   		<div id="loginContainer" style="
+		    position: relative;
+		    top: -524px;">
+		    <p:growl id="growlLongin" redisplay="false" rendered="true" showSummary="true"  showDetail="true"   sticky="true" escape="false"   style="position:fixed;width:250px;" />
+
+	      	<p:panel header="Acceso Usuarios" style="width:350px; margin: 0 auto;">
+		    	<h:panelGrid id="login-grid" columns="2" cellpadding="5" style="margin: 0 auto;">
+				    <h:outputLabel  for="username" value="Usuario:" />
+				    <p:inputText value="#{loginBean.username}" id="username" required="true" label="Usuario"  styleClass="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" >
+				    </p:inputText>
+				    <h:outputLabel for="password" value="Clave:" />
+				    <p:password value="#{loginBean.password}" id="password" required="true" label="Clave"   styleClass="ui-inputfield ui-inputtext ui-widget ui-state-default ui-corner-all" />
+		           	<f:facet name="footer" >
+		        		<p:panel style="text-align: center; border: none;">
+		        			<p:commandButton  value="Acceder" id="loginButton" update="login-grid,growlLongin" action="#{loginBean.login}" styleClass="ui-priority-primary"/>
+		        		</p:panel>
+		        	</f:facet>
+			    </h:panelGrid>
+				<p class="copyright-space" align="center"> #{msg['version']}</p>
+		    </p:panel>
+      
+   		</div>
+   		
+  </h:form>
+  
+</h:body>
+
+<script type="text/javascript">
+  //<![CDATA[
+  function manejarLogin(xhr, status, args) {
+    if (!args.validationFailed && args.estaLogeado) {
+      setTimeout(function() {
+        window.location = args.view;
+      }, 500);
+    }
+  }
+//]]>
+</script>
+	
+<p:confirmDialog id="Excepcion" 
+	    message="Se ha producido una excepción"
+		header="Excepcion" 
+		severity="alert"
+		widgetVar="Excepcion">
+	<h:form>
+		<p:commandButton id="botonCerrar" value="Cerrar" onclick="PF('Excepcion').hide();" type="button" />
+	</h:form>
+</p:confirmDialog>
+
+
+</html>

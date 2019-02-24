@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	<ui:define name="titulo">
+		<h:outputLabel value="Mantenimiento Tipo de Sensores" />
+	</ui:define>
+
+	<ui:define name="subtitulo">
+		<h:outputLabel value="Consulta Tipos Sensores" />
+	</ui:define>
+
+
+
+	<ui:define name="botonera">
+		<component:botonera bean="#{consultaTipoSensoresBean}" />
+	</ui:define>
+	<ui:define name="content">
+	
+		<p:fieldset legend="#{msg['fieldset.buscador']}" style="margin-bottom:20px">
+			<pe:fluidGrid id="criteriosBusqueda" resizeBound="true" hGutter="20" widgetVar="fluidGridWdgt">
+				<pe:fluidGridItem type="input">
+					<h:outputLabel value="Nombre:" for="nombreBusqueda" />
+					<p:inputText value="#{consultaTipoSensoresBean.tiposSensoresVO.nombre}" id="nombreBusqueda" maxlength="50" />
+				</pe:fluidGridItem>
+			</pe:fluidGrid>
+		</p:fieldset>
+<p:fieldset legend="#{msg['fieldset.buscador']}" style="margin-bottom:20px">
+	<p:carousel value="#{consultaTipoSensoresBean.listaTiposSensores}"  headerText="Resultados" var="tipoSensor" itemStyle="text-align:center; color:white;" responsive="true">
+        <p:panelGrid columns="2" style="width:100%;margin:10px 10px" columnClasses="label,value"  styleClass="ui-panelgrid-blank">
+           
+            <h:outputText value="Nombre:" />
+            <h:outputText value="#{tipoSensor.nombre}" />
+ 
+            <h:outputText value="Descripcion:" />
+            <h:outputText value="#{tipoSensor.descripcion}" />
+            
+            <p:commandLink value="Modificar" ajax="false" action="#{consultaTipoSensoresBean.goDetalle(tipoSensor)}" />
+            
+
+        </p:panelGrid>
+ 
+      
+    </p:carousel>
+		</p:fieldset> 
+
+	</ui:define>
+</ui:composition>
+</html>

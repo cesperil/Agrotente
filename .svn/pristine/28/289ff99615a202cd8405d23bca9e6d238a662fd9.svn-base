@@ -1,0 +1,32 @@
+package es.grapecheck.plataforma.persistencia.dao;
+
+import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.inject.Named;
+
+import es.grapecheck.plataforma.persistencia.vo.ParcelasVO;
+import es.grapecheck.plataforma.persistencia.vo.SensoresVO;
+
+/**
+ * Consultas realcionadas con los sensores contenidos en una determinada parcela.
+ * Plataforma 'GrapeCheck'
+ * @author Alejandro Visiga Hernández.
+ * @since 29/01/2017
+ */
+@Named
+@LocalBean
+public class SensoresDAO extends GenericDAOImpl<SensoresVO> {
+	
+	/**
+	 * Metodo para listar todos los sensores contenidos en una parcela.
+	 * @param parcelaVO -> Parcela donde se encuentran los sensores.
+	 * @return una lista con todos los sensores contenidos en la parcela.
+	 */
+	public List<SensoresVO> getParcelasByUsuario(ParcelasVO parcelaVO){
+		
+		List<SensoresVO> lista = (List<SensoresVO>) listarHQL("select p from SensoresVO p where p.fkIdeParcela = " + parcelaVO.getId());
+		return lista;	
+		
+	}
+}

@@ -1,0 +1,108 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+
+<h:outputStylesheet>
+       .pic {
+        margin-bottom: -4px;
+        margin-right: 2px;
+        }
+
+       .search .rf-ddm-itm-sel {
+        background-color: transparent;
+        background-image:none;
+        border-color: transparent;
+        cursor: default;
+       }
+       
+   </h:outputStylesheet>
+<h:form>
+
+<p:menubar id="menu-sup" styleClass="menu-sup" >
+		
+	<p:submenu label="#{msg['menu.administracion']}" rendered="#{sessionScope['UsuarioLogin'].fkIdePerfiles.id eq 1}">
+		<p:menuitem value="#{msg['menu.mantenimiento.usuarios']}" action="#{menuBean.borrarBeanSesionMenosUsuario(2)}"/>
+		<p:menuitem value="#{msg['menu.mantenimiento.tiposensores']}" action="#{menuBean.borrarBeanSesionMenosUsuario(3)}"/>
+	</p:submenu>
+		
+	<f:facet name="options" >
+		<p:panel id="login-data" styleClass="login-data">
+			<p:outputPanel styleClass="time-container">
+				<h:outputText value="#{msg['fecha']}:" style="font-size: 11px;"/>
+    			<p:clock pattern="dd.MM.yyyy HH:mm:ss" />
+			</p:outputPanel>
+			<h:graphicImage	library="imagenes" name="user.png"	alt="Usuario conectado" title="Usuario conectado" style="vertical-align: bottom;"/>
+			<!--  <h:outputLabel for="usuarioLogin" value="Usuario: " style="padding-right: 10px;">-->
+				<h:outputText value="#{sessionScope['UsuarioLogin'].username}" />
+			<!--</h:outputLabel>-->
+			<h:outputLabel for="perfilLogin" value="Perfil: " style="padding-right: 10px;">
+				<h:outputText id="perfilLogin" value="#{sessionScope['UsuarioLogin'].fkIdePerfiles.nombre}"/>
+			</h:outputLabel>
+			<h:outputText value="  |  " style="padding-right: 10px;"/>
+			<a href="#{facesContext.externalContext.requestContextPath}/login.xhtml" style="font-size:14px;font-weight:bold;color:#94328D;text-decoration:none;" >
+				<h:outputText value="Salir"/>
+			</a>
+		</p:panel>
+		
+	</f:facet>	
+	
+</p:menubar>
+
+</h:form>
+<!-- Script para ocultar los items del menú onmouseout -->
+<script type="text/javascript">
+       //<![CDATA[
+		PrimeFaces.widget.Menubar.prototype.deactivate = function(b, a) {
+		       var menu = this;
+		       menu.activeitem = null;
+		       b.children("a.ui-menuitem-link").removeClass(
+		                    "ui-state-hover ui-state-active");
+		       b.removeClass("ui-menuitem-active ui-menuitem-highlight");
+		       if (a) {
+		             b.children("ul.ui-menu-child").fadeOut("fast");
+		       } else {
+		             b.children("ul.ui-menu-child").hide();
+		             if (!this.timer) {
+		                    this.timer = setTimeout(function() {
+		                           menu.reset();
+		                    }, 200);
+		             }
+		       }
+		}
+		
+		PrimeFaces.widget.Menubar.prototype.reactivate = function(d) {
+		       if (this.timer) {
+		             clearTimeout(this.timer);
+		             this.timer = null;
+		       }
+		       this.activeitem = d;
+		       var c = d.children("ul.ui-menu-child"), b = c
+		                    .children("li.ui-menuitem-active:first"), a = this;
+		       if (b.length == 1) {
+		             a.deactivate(b)
+		       }
+		}
+		
+		PrimeFaces.widget.Menubar.prototype.activate = function(b) {
+		       if (this.timer) {
+		             clearTimeout(this.timer);
+		             this.timer = null;
+		       }
+		       this.highlight(b);
+		       var a = b.children("ul.ui-menu-child");
+		       if (a.length == 1) {
+		             this.showSubmenu(b, a)
+		       }
+		}
+ 
+
+
+      //]]>
+   </script>
+</html>

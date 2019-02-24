@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+
+<ui:composition template="estructura/defaultLayoutPrincipal.xhtml">
+	<ui:define name="content"  >
+	
+
+	<h:form>
+	<f:view contentType="text/html">
+		<div id="body" align="center" >
+			<p:gmap id="gmap" center="38.8995, -6.374816" zoom="8" type="hybrid" model="#{menuBean.simpleModel}"  style="width:100%;height:400px" >
+			
+				    <p:ajax event="overlaySelect" listener="#{menuBean.onMarkerSelect}" immediate="true	"/>
+ 
+        <p:gmapInfoWindow id="infoWindow">
+            <p:outputPanel style="text-align: center; display: block; margin: auto">
+ 
+                   
+                    <br />
+                    <h:outputText value="#{menuBean.marker.title}" />
+ 
+            </p:outputPanel>
+        </p:gmapInfoWindow>
+			
+			</p:gmap>
+			<p:commandButton action="#{menuBean.goNuevaFinca}"  id="iconOnly" icon="ui-icon-disk" title="Nueva Finca" />
+
+		</div>
+	</f:view>	
+	</h:form>
+	</ui:define>
+</ui:composition>
+
+
+
+</html>

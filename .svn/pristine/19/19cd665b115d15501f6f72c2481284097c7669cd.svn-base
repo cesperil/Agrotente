@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+
+<ui:composition template="estructura/defaultLayoutPrincipal.xhtml">
+	<ui:define name="content">
+		<div id="body" align="center">
+			<h:graphicImage library="imagenes" name="portada.jpg" alt="FONDO" title="FONDO" style="position: absolute; top: 40%; left: 40%;"/>
+		</div>
+	</ui:define>
+</ui:composition>
+
+</html>

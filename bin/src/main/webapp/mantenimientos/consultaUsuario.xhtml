@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	<ui:define name="titulo">
+		<h:outputLabel value="#{msg['mantenimiento.usuario.titulo']}" />
+	</ui:define>
+
+	<ui:define name="subtitulo">
+		<h:outputLabel value="#{msg['mantenimiento.usuario.consulta']}" />
+	</ui:define>
+
+
+
+	<ui:define name="botonera">
+		<component:botonera bean="#{consultaUsuarioBean}" />
+	</ui:define>
+	<ui:define name="content">
+	
+		<p:fieldset legend="#{msg['fieldset.buscador']}" style="margin-bottom:20px">
+			<pe:fluidGrid id="criteriosBusqueda" resizeBound="true" hGutter="20" widgetVar="fluidGridWdgt">
+				<pe:fluidGridItem type="input">
+					<h:outputLabel value="#{msg['mantenimiento.usuario.username']}:" for="usernameBusqueda" />
+					<p:inputText value="#{consultaUsuarioBean.usuarioVO.username}" id="usernameBusqueda" maxlength="50" />
+				</pe:fluidGridItem>
+				<pe:fluidGridItem type="input">
+					<h:outputLabel value="#{msg['campo.primer.apellido']}:" for="nombreBusqueda" />
+					<p:inputText value="#{consultaUsuarioBean.usuarioVO.apellido1}" id="nombreBusqueda" />
+				</pe:fluidGridItem>
+			</pe:fluidGrid>
+		</p:fieldset>
+
+
+		<p:dataTable id="div_busqueda"  rendered="#{(consultaUsuarioBean.numRegistros eq 0 or consultaUsuarioBean.elementList eq null) ? 'false' : 'true' }"
+	 				rows="10"
+					var="usuario"  
+					value="#{consultaUsuarioBean.elementList}" 
+	 			    selection="#{consultaUsuarioBean.selectedItems}" 
+	 			    rowKey="#{usuario.id}" 
+	 			    style="margin-bottom:0;"
+	 			    paginator="true">
+        <f:facet name="header">#{msg['mantenimiento.usuario.numeroregistros']}: (#{consultaUsuarioBean.numRegistros})</f:facet>
+        
+	        <p:column selectRow="false" selectionMode="multiple" style="width:16px;text-align:center"/>
+	        
+	       <!--  <p:column headerText="Id" sortBy="#{usuario.id}">
+	       		<h:commandLink action="#{consultaUsuarioBean.goDetalle}" styleClass="linkListado"> 
+	       		    <f:setPropertyActionListener value="#{usuario}" target="#{consultaUsuarioBean.elementoSeleccionado}" />
+	           		<h:outputText value="#{usuario.id}" />
+	           	</h:commandLink>
+	        </p:column>-->
+	         
+	        <p:column headerText="#{msg['mantenimiento.usuario.username']}" sortBy="#{usuario.username}">
+	       		<p:commandLink action="#{consultaUsuarioBean.goDetalle}" styleClass="linkListado" onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()"> <!-- con este estilo le quitamos ek subrayado de los links  -->	 
+	       		    <f:setPropertyActionListener value="#{usuario}" target="#{consultaUsuarioBean.elementoSeleccionado}" />
+	           		<h:outputText value="#{usuario.username}" />
+	           	</p:commandLink>
+	        </p:column>
+	         <p:column headerText="#{msg['campo.primer.apellido']}" sortBy="#{usuario.apellido1}">
+	       		<p:commandLink action="#{consultaUsuarioBean.goDetalle}" styleClass="linkListado" onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()"> <!-- con este estilo le quitamos ek subrayado de los links  -->	 
+	       		    <f:setPropertyActionListener value="#{usuario}" target="#{consultaUsuarioBean.elementoSeleccionado}" />
+	           		<h:outputText value="#{usuario.apellido1}" />
+	           	</p:commandLink>
+	        </p:column>
+	        
+	     <p:column headerText="#{msg['mantenimiento.usuario.roles']}" sortBy="#{usuario.fkIdePerfiles.nomCorto}">
+	       	 <p:commandLink action="#{consultaUsuarioBean.goDetalle}" styleClass="linkListado" onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()"> <!-- con este estilo le quitamos ek subrayado de los links  -->	 
+	    <f:setPropertyActionListener value="#{usuario}" target="#{consultaUsuarioBean.elementoSeleccionado}" />
+	           		<h:outputText value="#{usuario.fkIdePerfiles.nomCorto}" />
+	           	</p:commandLink>
+	        </p:column> 
+	        
+	        <p:column headerText="#{msg['campo.fecha.creacion']}" sortBy="#{usuario.fechaAlta}">
+	       		<p:commandLink action="#{consultaUsuarioBean.goDetalle}" styleClass="linkListado" onstart="PF('statusDialog').show()" onsuccess="PF('statusDialog').hide()"> <!-- con este estilo le quitamos ek subrayado de los links  -->	 
+	       		    <f:setPropertyActionListener value="#{usuario}" target="#{consultaUsuarioBean.elementoSeleccionado}" />
+	           		<h:outputText value="#{usuario.fechaAlta}"  >
+	               		<f:convertDateTime pattern="dd/MM/yyyy" />
+	               </h:outputText>
+	           	</p:commandLink>
+	        </p:column>
+        <f:facet name="footer" align="left">
+       		<h:panelGroup>
+	            <h:commandLink style="align:center" ajax="false">
+	                <p:graphicImage name="ico_excel.png" library="imagenes" width="24"/>
+	                <p:dataExporter type="xls" target="div_busqueda" fileName="Usuarios" />
+	            </h:commandLink>
+	 
+	            <h:commandLink ajax="false">
+	                <p:graphicImage name="ico_pdf.png" library="imagenes" width="24"/>
+	                <p:dataExporter type="pdf" target="div_busqueda" fileName="Usuarios"/>
+	            </h:commandLink>
+	 
+	            <h:commandLink ajax="false">
+	                <p:graphicImage name="ico_csv.png" library="imagenes" width="24"/>
+	                <p:dataExporter type="csv" target="div_busqueda" fileName="Usuarios" />
+	            </h:commandLink>
+ 			 </h:panelGroup>
+        </f:facet>
+        
+    </p:dataTable>
+
+	</ui:define>
+</ui:composition>
+</html>

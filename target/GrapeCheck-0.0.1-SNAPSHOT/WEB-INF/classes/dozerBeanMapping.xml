@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://dozer.sourceforge.net
+          http://dozer.sourceforge.net/schema/beanmapping.xsd">
+
+	<mapping>
+		<class-a>es.gpex.gobex.jbpm6.comun.vo.ExpedienteVO</class-a>
+		<class-b>es.gpex.gobex.jbpm6.comun.vo.ExpedienteWebVO</class-b>
+		<field>
+			<a>fechaAlta</a>
+			<b>fechaInicio</b>
+		</field>
+		<field>
+			<a>fkIdeProcedimiento.nombreLargo</a>
+			<b>procedimiento</b>
+		</field>
+	</mapping>
+
+	<mapping>
+		<class-a>es.gpex.gobex.jbpm6.comun.vo.ExpedienteViewVO</class-a>
+		<class-b>es.gpex.gobex.jbpm6.comun.vo.ExpedienteWebVO</class-b>
+		<field>
+			<a>fechaAlta</a>
+			<b>fechaInicio</b>
+		</field>
+	</mapping>
+
+	<mapping>
+		<class-a>es.gpex.gobex.galera.bean.AltaDocumentoAdjuntoBean</class-a>
+		<class-b>es.gpex.gobex.galera.vo.DocumentoAdjuntoVOImpl</class-b>
+		<field-exclude>
+			<a>fkIdeTipoDocumental</a>
+			<b>fkIdeTipoDocumental</b>
+		</field-exclude>
+	</mapping>
+	
+	<mapping>
+		<class-a>es.gpex.gobex.galera.vo.ProcedimientoGaleraVO</class-a>
+		<class-b> es.gpex.gobex.galera.form.ProcedimientoForm</class-b>
+		<field-exclude>
+			<a>expedientes</a>
+			<b>expedientes</b>
+		</field-exclude>
+	</mapping>
+	
+</mappings>

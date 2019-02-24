@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	<ui:define name="titulo">
+		<h:outputLabel value="#{msg['mantenimiento.usuario.titulo']}" />
+	</ui:define>
+
+	<ui:define name="subtitulo">	
+		<h:outputLabel value="Alta Tipos Sensores"/>
+	</ui:define>
+
+	<ui:define name="botonera">
+		<component:botonera bean="#{altaTiposSensoresBean}" /> 
+	</ui:define>
+	<ui:define name="content">
+	
+	<p:fieldset legend="#{msg['mantenimiento.usuario.datos.usuario']}">
+        <pe:fluidGrid id="fgDatosUsuario" resizeBound="true" hGutter="20" widgetVar="fluidGridWdgt">
+        	
+        	<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Nombre:" />						
+				<p:inputText value="#{altaTiposSensoresBean.tiposSensoresVO.nombre}" label="Nombre:" id="nombre" maxlength="50" size="13"  required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+				<h:outputLabel value="Descripcion:" />
+				<p:inputText value="#{altaTiposSensoresBean.tiposSensoresVO.descripcion}" label="Descripcion:" id="descripcion" maxlength="30" size="30" required="true"></p:inputText>
+			</pe:fluidGridItem>
+        </pe:fluidGrid>
+    </p:fieldset>
+	
+          
+	</ui:define>
+      		  
+</ui:composition>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_2.xsd"
+	version="2.2">
+	
+	
+	<application>
+		<locale-config><default-locale>es_ES</default-locale></locale-config>
+    	<!-- properties para los mensajes de validacion -->
+		<message-bundle>ValidationMessages</message-bundle>
+	</application>
+	
+	 <!-- incluir clase para controlar el ciclo de vida de las peticiones primefaces -->
+	<lifecycle>
+	   <phase-listener>es.grapecheck.plataforma.utiles.AyudasPhaseListener</phase-listener>
+	</lifecycle>
+	
+	<!--luisma Cuando ejecutamos el método goMenu que está en el método goSalirConsulta de BtoneraForm-->
+	<navigation-rule>
+		<from-view-id>/*</from-view-id>
+		<navigation-case>
+			<from-outcome>goMenu</from-outcome>
+			<to-view-id>/Principal.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<!-- 
+	<navigation-rule>
+		<from-view-id>/expedientes/consultaExpediente.xhtml</from-view-id>
+		<navigation-case>
+		<from-action>#{consultaExpedientesBean.goDetalle}</from-action>
+			<from-outcome>alta</from-outcome>
+			<to-view-id>expedientes/altaExpediente.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+ -->
+ 
+ 	<!-- Componentes propios jbecerra -->
+ 	<component> 
+        <component-type>org.primefaces.component.DataTable</component-type> 
+        <component-class>es.grapecheck.plataforma.component.DataTableViogen</component-class> 
+    </component>
+    <component> 
+        <component-type>org.primefaces.component.Calendar</component-type> 
+        <component-class>es.grapecheck.plataforma.component.CalendarViogen</component-class> 
+    </component>
+</faces-config>

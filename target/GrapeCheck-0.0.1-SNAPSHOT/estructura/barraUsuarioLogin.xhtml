@@ -1,0 +1,25 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<f:view>
+	<p:panelGrid id="barraPerfil" styleClass="barraPerfil" columns="3" style="width:100%; background-color: transparent; border: none;" >
+
+		<h:outputLabel for="usuarioLogin" value="Usuario: " >
+			<h:outputText value="#{sessionScope['usuarioVO'].username}" />
+		</h:outputLabel>
+
+		<h:outputLabel for="perfilLogin" value="Perfil: " >
+			<h:outputText value="admin"/>
+		</h:outputLabel>
+
+		<a href="#{facesContext.externalContext.requestContextPath}/login.xhtml" style="font-size:14px;font-weight:bold;color:#94328D;text-decoration:none;">
+			<img src="#{facesContext.externalContext.requestContextPath}/imagenes/ico_salir.gif" style="align:left;vertical-align: bottom;" onclick="window.close()"/>
+			Salir
+		</a>
+
+	</p:panelGrid>
+</f:view>
+</ui:composition>

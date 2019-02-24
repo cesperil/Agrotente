@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	
+	<ui:define name="botonera">
+		<component:botonera bean="#{gestionTrabajosBean}" /> 
+	</ui:define>
+	<ui:define name="content">
+	
+	<p:fieldset legend="Trabajos">
+		<p:dataTable var="trabajo" value="#{gestionTrabajosBean.listaTrabajos}" >
+		    <p:column headerText="Parcela">
+		        <h:outputText value="#{trabajo.fkParcela.nombre}" />
+		    </p:column>
+		    <p:column headerText="Trabajador">
+		        <h:outputText value="#{trabajo.fkTrabajador.nombre}" />
+		    </p:column>
+		    <p:column headerText="Fecha Inicio">
+		        <h:outputText value="#{trabajo.fechaInicio}" />
+		    </p:column>
+		    <p:column headerText="Fecha Fin">
+		        <h:outputText value="#{trabajo.fechaFin}" />
+		    </p:column>
+		    <p:column headerText="Importe">
+		        <h:outputText value="#{trabajo.importe}" />
+		    </p:column>
+		    <p:column headerText="Descripcion">
+		        <h:outputText value="#{trabajo.descripcion}" />
+		    </p:column>
+		</p:dataTable>
+	</p:fieldset>
+	
+          
+	</ui:define>
+      		  
+</ui:composition>
+</html>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"      
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+      
+<h:head> </h:head> 
+
+<h:body style="text-align:center">
+   	<h:form>
+	   	<p:outputPanel deferred="true">
+	        <h3>Error Fatal</h3>
+	        <p>Página no disponible, consulte con su administrador</p>
+	    </p:outputPanel>
+ 		
+ 		 <div style="height:100px"></div>
+ 	
+   		 <div style="height:400px">
+   		 	<h:graphicImage
+				library="galera_default" name="img/error.png"
+				alt="Error" title="Error" />
+   		 </div>
+   		 <div><p:commandButton value="Volver" id="VolverButton" action="Asistente?faces-redirect=true" styleClass="ui-priority-primary" /></div>
+	</h:form>
+</h:body>
+
+<script type="text/javascript">
+  //<![CDATA[
+  function manejarLogin(xhr, status, args) {
+    if (!args.validationFailed && args.estaLogeado) {
+      setTimeout(function() {
+        window.location = args.view;
+      }, 500);
+    }
+  }
+//]]>
+</script>
+</html>

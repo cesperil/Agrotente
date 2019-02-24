@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	<ui:define name="titulo">
+		<h:outputLabel value="Mantenimiento Sensores" />
+	</ui:define>
+
+	<ui:define name="subtitulo">
+		<h:outputLabel value="Consulta Sensores" />
+	</ui:define>
+
+
+
+	<ui:define name="botonera">
+		<component:botonera bean="#{consultaSensoresBean}" />
+	</ui:define>
+	<ui:define name="content">
+	
+
+	</ui:define>
+</ui:composition>
+</html>

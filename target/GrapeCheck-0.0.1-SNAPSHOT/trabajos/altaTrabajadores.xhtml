@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	
+	<ui:define name="botonera">
+		<component:botonera bean="#{gestionTrabajadoresBean}" /> 
+	</ui:define>
+	<ui:define name="content">
+	
+	<p:fieldset legend="Nuevo Trabajador">
+		<pe:fluidGrid id="fgDatosTrabajadores" resizeBound="true" hGutter="20" widgetVar="fluidGridWdgt">
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Nombre" />						
+				<p:inputText value="#{gestionTrabajadoresBean.trabajadorVO.nombre}" label="Nombre" id="nombre" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+	    	<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Apellidos" />						
+				<p:inputText value="#{gestionTrabajadoresBean.trabajadorVO.apellidos}" label="Apellidos" id="apellidos" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="NIF" />						
+				<p:inputText value="#{gestionTrabajadoresBean.trabajadorVO.dni}" label="NIF" id="NIF" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Fecha Nacimiento"/>							
+				<p:inputMask value="#{gestionTrabajadoresBean.trabajadorVO.textoFecha}" mask="99/99/9999"/>
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Telefono" />						
+				<p:inputText value="#{gestionTrabajadoresBean.trabajadorVO.telefono}" label="Telefono" id="telefono" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Email" />						
+				<p:inputText value="#{gestionTrabajadoresBean.trabajadorVO.email}" label="Email" id="email" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+    	</pe:fluidGrid>
+	</p:fieldset>
+	
+	<p:fieldset legend="Trabajadores">
+		<p:dataTable var="trabajador" value="#{gestionTrabajadoresBean.listaTrabajadores}">
+		    <p:column headerText="Nombre">
+		        <h:outputText value="#{trabajador.nombre}" />
+		    </p:column>
+		    <p:column headerText="Apellidos">
+		        <h:outputText value="#{trabajador.apellidos}" />
+		    </p:column>
+		    <p:column headerText="NIF">
+		        <h:outputText value="#{trabajador.dni}" />
+		    </p:column>
+		    <p:column headerText="Fecha Nacimiento">
+		        <h:outputText value="#{trabajdor.textoFecha}" />
+		    </p:column>
+		</p:dataTable>
+	</p:fieldset>
+          
+	</ui:define>
+      		  
+</ui:composition>
+</html>

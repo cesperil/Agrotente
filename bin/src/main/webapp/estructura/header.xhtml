@@ -1,0 +1,19 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<f:view>
+	<h:form id="formularioHeader" enctype="multipart/form-data">
+		<div id="cab">
+			<div class="container-cab">
+				<div class="container-logo">
+					<h:commandLink action="#{menuBean.goInicio}"><h:graphicImage	library="imagenes" name="logo_gestor.gif"	alt="Asistente AGILE" /></h:commandLink>
+					<h:commandLink onclick="window.open('http://www.google.es/')">	<h:graphicImage	library="imagenes" name="logo_junta_extremadura.png"	alt="Asistente AGILE" style="float: right; margin-top: -5px;"/></h:commandLink>
+				</div>
+			</div>
+		</div>
+	</h:form>
+	<ui:include src="menu.xhtml" /> 
+</f:view>
+</html>

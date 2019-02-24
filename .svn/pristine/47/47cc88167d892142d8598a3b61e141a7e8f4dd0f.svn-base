@@ -1,0 +1,14 @@
+# In the following line, set SSL_ENABLED to true for SSL
+remote.connectionprovider.create.options.org.xnio.Options.SSL_ENABLED=false
+remote.connections=default
+# Uncomment the following line to set SSL_STARTTLS to true for SSL
+# remote.connection.default.connect.options.org.xnio.Options.SSL_STARTTLS=true
+remote.connection.default.host=localhost
+remote.connection.default.port = 4447
+remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMOUS=false
+remote.connection.default.username=ejb
+remote.connection.default.password=nerea
+# Add any of the following SASL options if required
+# remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOANONYMOUS=false
+# remote.connection.default.connect.options.org.xnio.Options.SASL_POLICY_NOPLAINTEXT=false
+# remote.connection.default.connect.options.org.xnio.Options.SASL_DISALLOWED_MECHANISMS=JBOSS-LOCAL-USER

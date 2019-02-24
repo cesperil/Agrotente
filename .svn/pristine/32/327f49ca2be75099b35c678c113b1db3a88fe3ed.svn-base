@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	
+	<ui:define name="botonera">
+		<component:botonera bean="#{detalleFincasBean}" /> 
+	</ui:define>
+	<ui:define name="content">
+	
+	<p:fieldset legend="Localización de Fincas">
+    	<pe:fluidGrid id="fgDatosLocalizacion" resizeBound="true" hGutter="20" widgetVar="fluidGridWdgt">
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Nombre de parcela" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.nombre}" label="Nombre de parcela" id="nombreParcela" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+	    	<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Numero Parcela" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.parcela}" label="Numero Parcela" id="numeroParcela" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Numero poligono" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.poligono}" label="Numero poligono" id="numeroPoligono" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Codigo Municipio" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.cod_municipio}" label="Codigo Municipio" id="codigoMunicipio" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Latitud" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.latitud}" label="Latitud" id="latitudParcela" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Longitud" />						
+				<p:inputText value="#{detalleFincasBean.parcelasVO.longitud}" label="Longitud" id="nombreLongitud" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+	    	
+    	</pe:fluidGrid>
+    </p:fieldset>
+	
+          
+	</ui:define>
+      		  
+</ui:composition>
+</html>

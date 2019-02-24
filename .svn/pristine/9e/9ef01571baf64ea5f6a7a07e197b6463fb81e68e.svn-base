@@ -1,0 +1,372 @@
+mensaje.error=Mensaje de error
+mensaje.informacion=Mensaje de informaci\u00F3n
+mensaje.warning=Mensaje de advertencia
+
+#datatable
+mensaje.nodata=No existe ning\u00FAn resultado
+etiqueta.consulta.expediente.numero.registros=Registros
+
+#mensajeCOmunes
+mensaje.comun.guardado.correctamente=Se ha guardado correctamente
+mensaje.comun.operacion.correcta=Se ha completado la operaci\u00F3n correctamente
+mensaje.comun.error.operacion=Se ha producido un error en la operaci\u00F3n
+mensaje.comun.eliminar.correctamente=Se ha eliminado correctamente
+mensaje.comun.pregunta.continuar=\u00BFEst\u00E1 seguro de que desea realizar la operaci\u00F3n?
+mensaje.comun.pregunta.cabecera=Pregunta
+ 
+wait.ajax.texto = Cargando...
+#botones
+boton.aceptar=Aceptar
+boton.guardar=Guardar
+boton.editar=Editar
+boton.buscar=Buscar
+boton.cancelar=Cancelar
+boton.salir=Salir
+boton.ejecutar=Ejecutar tr\u00E1mite actual
+boton.abortar=Abortar
+boton.suspender=Suspender
+boton.reactivar=Reactivar
+boton.adjuntarDoc=Adjuntar Documentaci\u00F3n
+boton.ver=Ver
+boton.eliminar=Eliminar
+boton.anadir=A\u00F1adir
+boton.ver.documento=Ver documento
+
+#Botones paginacion
+boton.paginacion.anterior=Repetici\u00F3n anterior
+boton.paginacion.eliminar=Eliminar repetici\u00F3n
+boton.paginacion.siguiente=Siguiente repetici\u00F3n
+
+titulo.botonera.paginacion=Control de repetici\u00F3n de hojas
+texto.botonera.paginacion.repeticion=Repetici\u00F3n
+texto.botonera.paginacion.de=de
+
+#menu
+menu.procedimientos=Procedimientos
+menu.procedimientos.despliegue=Despliegue
+menu.procedimientos.mantenimiento=Mantenimiento
+menu.procedimientos.iniciar=Iniciar procedimiento
+
+
+menu.documentos=Documentos
+menu.tipoDocumental=Tipo documental
+
+menu.documentosAdjuntos=Documentos adjuntos
+menu.documentosAdjuntos.consulta=Consulta
+menu.documentosAdjuntos.alta=Alta
+menu.documentosAdjuntos.relacion=Relaci\u00F3n con procedimiento
+
+menu.expedientes=EXPEDIENTES
+menu.mantenimientos=MANTENIMIENTOS
+menu.administracion=ADMINISTRACION
+menu.expedientes.consultaviolencia=Expedientes
+menu.expedientes.codExpediente=C\u00F3digo Expediente
+
+#campo
+campo.cip= CIP
+campo.circuito.nerea=Circuito NEREA
+campo.nombre.corto=Nombre corto
+campo.nombre.largo=Nombre largo
+campo.descripcion=Descripci\u00F3n
+campo.ambito=\u00E1mbito
+campo.modelo=Modelo
+campo.sistema.gestor=Sistema gestor
+campo.direccion.url=Direcci\u00F3n url
+campo.direccion=Direcci\u00F3n
+campo.provincia=Provincia
+campo.ayuda=Ayuda
+campo.informacion=Informaci\u00F3n
+campo.tipo.acceso=Tipo acceso
+campo.entidadesLocales=Entidades locales
+campo.fecha.inicio=Fecha inicio
+campo.fecha.fin=Fecha fin
+campo.tamano.especial=Tama\u00F1o especial
+campo.criterios.busqueda=Criterios de b\u00FAsqueda
+campo.num.casilla=N\u00FAmero de casilla
+campo.valor=Valor
+campo.es.obligatorio=Documento obligatorio
+campo.permite.adjuntar=Permite adjuntar
+campo.permite.sala.firma=Permite sala firma
+campo.permite.referencia=Permite referencia
+campo.permite.existente=Permite existente
+campo.procedimiento=Procedimiento
+campo.estado=Estado
+campo.fecha.desde=Desde
+campo.fecha.hasta=Hasta
+campo.fecha.creacion=Fecha creaci\u00F3n
+campo.fecha.notificacion=Fecha notificaci\u00F3n
+campo.estado.notificacion=Estado notificaci\u00F3n
+campo.nombre=Nombre
+campo.primer.apellido=Primer apellido
+campo.segundo.apellido=Segundo apellido
+campo.fecha.nacimiento=Fecha nacimiento
+campo.estado.civil=Estado civil
+campo.sexo=Sexo
+campo.razon.social=Raz\u00F3n social
+campo.codigo=C\u00F3digo
+campo.tipo.documento=Tipo documento
+campo.rue=RUE
+campo.nif=NIF
+campo.fecha.resolucion=Fecha Resoluci\u00F3n
+campo.telefono=Tel\u00E9fono
+campo.nacionalidad=Nacionalidad
+campo.municipio=Municipio
+campo.codigopostal=C\u00F3digo Postal
+campo.fecha.inicioproteccion=Fecha Inicio Protecci\u00F3n
+campo.fecha.finproteccion=Fecha Fin Protecci\u00F3n
+campo.gradoDiscapacidad=Grado de discapacidad
+campo.observaciones=Observaciones
+campo.responsabilidades.familiares=Responsabilidades familiares
+campo.fecha.ultimamodificacion=Fecha ultima modificaci\u00F3n
+campo.password = Contraseña
+campo.correoElectronico=Correo Electr\u00F3nico
+
+### CONSULTA EXPEDIENTES###
+expedientes.consulta.titulo= Consulta de expedientes
+expedientes.consulta.subtitulo= CONSULTA
+expedientes.detalle.subtitulo= Datos del expediente
+expedientes.exp.asociados.subtitulo=Expedientes asociados
+expedientes.consulta.ruta=>Procedimientos > Consulta expedientes
+expedientes.convocatoria=Convocatoria
+expedientes.estado=Estado
+expedientes.FechaRegistroDesde=Fecha registro desde
+expedientes.FechaRegistroHasta=Fecha registro hasta
+expedientes.numero.registros=Registros
+expedientes.codigo.expediente=C\u00F3digo expediente
+expediente.nif=Nif
+expediente.nombre=Nombre completo
+expediente.fecha.registro=Fecha registro
+
+fieldset.buscador=BUSCADOR
+fieldset.buscador.expedientes=BUSCADOR EXPEDIENTES
+
+servicio.copiarTodos = Copiar todos
+servicio.copiar=Copiar
+servicio.borrar = Borrar
+servicio.borrarTodos = Borrar todos
+servicio.tablasAfectadas = Tablas afectadas
+
+etiqueta.activo=Activo
+etiqueta.inactivo=Inactivo
+etiqueta.datosGenerales=Datos generales
+etiqueta.documentacion=Documentaci\u00F3n
+etiqueta.aniadir.documentacion=A\u00F1adir documentaci\u00F3n
+etiqueta.eliminar.documentacion=Eliminar documentaci\u00F3n
+etiqueta.documento=Documento
+etiqueta.obligatorio=Obligatorio
+etiqueta.procedimiento=Procedimiento
+etiqueta.tramite=Tr\u00E1mite
+etiqueta.fecha.apertura.expediente=Fecha apertura expediente
+
+etiqueta.cod.registra=C\u00F3digo registra
+etiqueta.cod.archiva=C\u00F3digo archiva
+etiqueta.fecha.registro=Fecha registro
+etiqueta.numero.registro=Nº. registro
+etiqueta.tipo.tramite=Tr\u00E1mites de
+etiqueta.busqueda.por=B\u00FAsqueda por
+etiqueta.fecha.presentacion=Fecha Presentaci\u00F3n
+etiqueta.fecha.grabacion= Fecha Grabaci\u00F3n
+etiqueta.introduzcaValor=(Introduzca valor)
+
+etiqueta.num.expediente=Nº Expediente
+etiqueta.rue=RUE
+etiqueta.estado=Estado
+etiqueta.fecha.apertura=Fecha apertura
+etiqueta.inicio.tramite=Inicio tr\u00E1mite
+etiqueta.expediente.sin.rue=No se ha generado RUE - ID
+etiqueta.version=versi\u00F3n
+etiqueta.circuito=Circuito
+etiqueta.tramites.completados=Tr\u00E1mites completados
+etiqueta.tramite.actual=Tr\u00E1mite actual
+etiqueta.organo=\u00F3rgano
+etiqueta.tramite.tipo=Tipo tr\u00E1mite
+etiqueta.tramite.nombre=Nombre
+etiqueta.tramite.fechaTramite=Fecha.
+etiqueta.expediente.linea=Linea
+etiqueta.expediente.actividad.laboral=Actividad laboral
+
+etiqueta.cabecera.informacion=Informaci\u00F3n
+etiqueta.cabecera.confirmacion=Confirmaci\u00F3n
+etiqueta.cabecera.consulta=Información consulta
+etiqueta.cabecera.exception=Información excepción
+etiqueta.cabecera.advertencia=Advertencia
+etiqueta.mensaje.infoeliminar.expediente=Expediente eliminado correctamente.
+etiqueta.mensaje.convocatoriaeliminar=Debe seleccionar algun registro
+etiqueta.mensaje.confirmeliminarconsultaexpediente=¿Está seguro de eliminar estos Expedientes?
+etiqueta.mensaje.exception=Se ha producido una excepción
+etiqueta.mensaje.nosepuedeeliminar=No se puede borrar este registro porque otros dependen de el.
+etiqueta.mensaje.infoeliminar.convocatoria=Convocatoria eliminada correctamente.
+etiqueta.mensaje.almacenado=El expediente se ha guardado correctamente.
+etiqueta.mensaje.inforegistro=No se encuentra ningun registro
+etiqueta.mensaje.convocatoriaguardado=Convocatoria guardada correctamente.
+etiqueta.mensaje.dominioguardado=Dominio guardado correctamente.
+etiqueta.mensaje.estado=Estado guardado correctamente.
+etiqueta.mensaje.infoeliminar.estado=Estado eliminado correctamente.
+etiqueta.mensaje.parametroguardado=Parametro General guardado correctamente.
+etiqueta.mensaje.infoeliminar.parametrosgenerales=Parametro General eliminado correctamente.
+etiqueta.mensaje.usuarioguardado=Usuario guardado correctamente.
+etiqueta.mensaje.infoeliminar.usuario=Usuario eliminado correctamente.
+etiqueta.mensaje.parcelaguardado = Parcela guardada correctamente.
+etiqueta.mensaje.valordominioguardado=Valor Dominio guardado correctamente.
+etiqueta.mensaje.infoeliminar.dominio=Dominio eliminado correctamente.
+etiqueta.operacionexito=Operaci\u00F3n realizada con exito.
+etiqueta.mensaje.infoeliminar.documentacionadjunta=Documentación adjunta borrada correctamente.
+etiqueta.mensaje.rutaplantillaerronea=No se encuentra la plantilla en la ruta especificada
+etiqueta.mensaje.faltadatos=No se ha podido imprimir el fichero, faltan datos necesarios
+etiqueta.mensaje.ficheroimpresionguardado=Fichero Impresion guardado correctamente.
+etiqueta.mensaje.grupoguardado=Grupo guardado correctamente. 
+etiqueta.mensaje.obligatorioadj=Es obligatorio adjuntar un archivo
+etiqueta.cabecera.errorvalidacion=ERROR VALIDACION
+etiqueta.mensaje.rutaerronea=No se encuentra el archivo en la ruta especificada
+etiqueta.mensaje.valordocumentacionGuardada=Documentaci\u00F3n solicitada guardada correctamente.
+etiqueta.mensaje.asignadogrupo=Se ha asignado el grupo
+etiqueta.mensaje.asignadogrupoexp=expedientes
+etiqueta.mensaje.seleccionegrupo=Seleccione un grupo
+etiqueta.mensaje.confirmeliminargrupoexpediente=¿Está seguro de desvincular el grupo de estos expedientes?
+
+etiqueta.economicos.trabajocuentaajena=Trabajos por cuenta ajena
+etiqueta.economicos.trabajocuentapropia=Trabajos por cuenta propia
+etiqueta.economicos.trabajoregimenagrario=Trabajos eventuales del r\u00E9gimen agrario
+etiqueta.economicos.pagas=Pensiones, subsidios, becas, ayudas y subvenciones
+etiqueta.economicos.inmuebles=Bienes inmmuebles 
+etiqueta.economicos.otros=Otros ingresos
+
+expedientes.gestion.docs.documentos.asociados=Documentos Asociados
+expedientes.gestion.docs.documentos.referencia=Documentos a buscar por referencias
+expedeintes.gestion.docs.creados.lista.doc=Documentos creados en el expediente
+expedeintes.gestion.docs.creados.lista.casilla=Listado de casillas del documento
+expedeintes.gestion.admin.lista=Listado de administrados
+expedeintes.gestion.repre.lista=Listado de representantes
+
+
+gestionexpedientes.etiqueta.evento.apertura=Evento apertura
+gestionexpedientes.etiqueta.info.general=Informaci\u00F3n general
+
+gestionexpedientes.etiqueta.info.documento=Informaci\u00F3n del documento
+gestionexpedientes.etiqueta.seleccion.tipo.formato.documento=Selecci\u00F3n de formato
+
+popup.mensaje.error.validacion=ERROR DE VALIDACION
+popup.mensaje.error=Error
+popup.mensaje.info=Informaci\u00F3n
+popup.mensaje.advertencia=Advertencia
+
+#Asistente AGILE
+asistente.titulo= Expediente
+expedientes.alta=Alta Expediente
+expedientes.consulta=Consulta Expediente
+menu.mantenimiento.usuarios=Usuarios
+menu.mantenimiento.convocatorias=Convocatorias
+menu.mantenimiento.estados=Estados
+
+
+#Etiquetas mantenimiento estados
+mantenimiento.estados.titulo=Mantenimiento de estados
+mantenimiento.estados.consulta=Consulta de estados
+mantenimiento.estados.alta=Alta de estados.
+mantenimiento.estados.legend=DATOS DE ESTADOS
+mantenimiento.estados.tipo=Tipo
+mantenimiento.estados.codigo=C\u00F3digo
+mantenimiento.estados.nombre=Nombre
+mantenimiento.estados.convocatoria=Convocatoria
+mantenimiento.estados.descripcion=Descripci\u00F3n
+
+#Etiquetas mantenimiento valores dominio
+mantenimiento.valoresdominio.titulo=Mantenimiento de valores dominio
+mantenimiento.valoresdominio.consulta=Consulta de valores dominio
+mantenimiento.valoresdominio.alta=Alta de valores dominio
+mantenimiento.valoresdominio.legend=DATOS DE VALORES DOMINIO
+mantenimiento.valoresdominio.dominio=Dominio
+mantenimiento.valoresdominio.nombrecorto=Nombre corto
+mantenimiento.valoresdominio.nombrelargo=Nombre largo
+mantenimiento.valoresdominio.descripcion=Descripci\u00F3n
+mantenimiento.valoresdominio.valor=Valor
+mantenimiento.valoresdominio.codbasica=Codificaci\u00F3n 
+
+#ETIQUETAS LOG
+etiqueta.log.consultasql=Consulta SQL
+etiqueta.log.legend.descargar=Descargar log
+etiqueta.log.legend.rutas=Rutas
+etiqueta.log.properties=RUTA Asistente.properties
+
+etiqueta.consultaSqlLog.Consola=Consola
+etiqueta.consultaSqlLog.properties=Properties y rutas
+
+#Etiquetas mantenimiento usuarios
+mantenimiento.usuario.username=Usuario
+mantenimiento.usuario.password=Contrase\u00F1a
+mantenimiento.usuario.fullName=Nombre
+mantenimiento.usuario.roles=Roles
+mantenimiento.usuario.titulo=Mantenimiento de Usuarios
+mantenimiento.usuario.consulta=Consulta de Usuarios
+mantenimiento.usuario.alta=Alta de Usuarios
+
+mantenimiento.usuario.numeroregistros=Registros
+mantenimiento.usuario.datos.usuario=DATOS DEL USUARIO
+mantenimiento.usuario.id=Id
+mantenimiento.usuario.perfil=Perfil
+
+etiqueta.introduzcaValor=(Introduzca valor)
+
+#Etiquetas mantenimiento convocatorias
+mantenimiento.convocatorias.titulo= Mantenimiento de Convocatorias
+mantenimiento.convocatorias.consulta=Listado de Convocatorias
+mantenimiento.convocatorias.alta=Alta de Convocatorias
+mantenimiento.convocatorias.nombrelargo=Nombre Largo
+mantenimiento.convocatorias.nombrecorto=Nombre Corto
+mantenimiento.convocatorias.fechainicio=Fecha Inicio
+mantenimiento.convocatorias.fechafin=Fecha Fin
+mantenimiento.convocatorias.ejercicio=Ejercicio
+mantenimiento.convocatorias.activo=Activa
+
+#Etiquetas administracion consulta log
+administracion.consultasqllog.titulo=Consulta Log
+administracion.consultasqllog.rutaorigen=Ruta Log Origen
+administracion.consultasqllog.rutadestino=Ruta Log Destino
+
+#rsanchez 20151008 Etiquetas para domicilios
+domicilio.tipoVia=Tipo V\u00EDa
+domicilio.nombreVia=Nombre V\u00EDa
+domicilio.puerta=Pta.
+domicilio.piso=Planta
+domicilio.numero=N\u00FAmero
+domicilio.direccion=Direcci\u00F3n
+domicilio.escalera=Esc.
+domicilio.bloque=Bloq.
+domicilio.codPostal=C\u00F3digo Postal
+domicilio.portal=Portal
+domicilio.tipoNumero=Tipo N\u00FAm.
+domicilio.calNum=Cal.n\u00FAm.
+domicilio.complementoDomicilio=Complemento domicilio
+domicilio.provincia=Provincia
+domicilio.municipio=Municipio
+domicilio.localidad=Localidad
+domicilio.pais=Pa\u00EDs
+domicilio.telefono1=Tel\u00E9fono fijo 1
+domicilio.telefono2=Tel\u00E9fono fijo 2
+domicilio.movil=M\u00F3vil
+domicilio.fax=Fax
+domicilio.correoElectronico=Correo Electr\u00F3nico
+domicilio.paginaWeb=P\u00E1gina Web
+domicilio.areaGasto=\u00c1rea de gasto
+domicilio.es.notificacion=Es domicilio de notificaciones
+simbolo.euro=&euro;
+domicilionotificaciones.validacion.nombrevia=·El campo Nombre via del domicilio de notificaciones es obligatorio.
+domicilionotificaciones.validacion.tipovia=·El campo Tipo via del domicilio de notificaciones es obligatorio.
+domicilionotificaciones.validacion.provincia=·El campo Provincia del domicilio de notificaciones es obligatorio.
+domicilionotificaciones.validacion.municipio=·El campo Municipio del domicilio de notificaciones es obligatorio.
+domicilionotificaciones.validacion.localidad=·El campo Localidad del domicilio de notificaciones es obligatorio.
+domicilionotificaciones.validacion.codigopostal=·El campo Codigo postal del domicilio de notificaciones es obligatorio.
+domicilionotificaciones.validacion.areagasto=·El campo Area de gasto del domicilio de notificaciones es obligatorio.
+domicilio.validacion.tipovia=·El campo Tipo via del domicilio es obligatorio.
+domicilio.validacion.nombrevia=·El campo Nombre via del domicilio es obligatorio.
+domicilio.validacion.provincia=·El campo Provincia del domicilio es obligatorio.
+domicilio.validacion.municipio=·El campo Municipio del domicilio es obligatorio.
+domicilio.validacion.localidad=·El campo Localidad del domicilio es obligatorio.
+domicilio.validacion.codigopostal=·El campo Codigo postal del domicilio es obligatorio.
+domicilio.validacion.areagasto=·El campo Area de gasto del domicilio es obligatorio.
+
+#Etiquetas para expediente 
+etiqueta.expediente.datos.expediente.legend=DATOS EXPEDIENTE
+
+fecha=Fecha y Hora
+version=Versi\u00F3n\: V01-01

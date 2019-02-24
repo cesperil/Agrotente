@@ -1,0 +1,12 @@
+package es.grapecheck.plataforma.persistencia.dao;
+
+import es.grapecheck.plataforma.persistencia.vo.SensoresVO;
+
+/**
+ * 
+ * @author Alejandro
+ *
+ */
+public class SensoresDAO extends GenericDAOImpl<SensoresVO> {
+
+}

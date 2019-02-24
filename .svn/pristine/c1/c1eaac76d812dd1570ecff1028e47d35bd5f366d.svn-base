@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	<ui:define name="titulo">
+		<h:outputLabel value="#{msg['mantenimiento.usuario.titulo']}" />
+	</ui:define>
+
+	<ui:define name="subtitulo">	
+		<h:outputLabel value="#{msg['mantenimiento.usuario.alta']}"/>
+	</ui:define>
+
+	<ui:define name="botonera">
+		<component:botonera bean="#{altaUsuarioBean}" /> 
+	</ui:define>
+	<ui:define name="content">
+	
+	<p:fieldset legend="#{msg['mantenimiento.usuario.datos.usuario']}">
+        <pe:fluidGrid id="fgDatosUsuario" resizeBound="true" hGutter="20" widgetVar="fluidGridWdgt">
+        	
+        	<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="#{msg['mantenimiento.usuario.username']}:" />						
+				<p:inputText value="#{altaUsuarioBean.usuarioVO.username}" label="Usuario" id="username" maxlength="50" size="13" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="password">
+				<h:outputLabel value="#{msg['campo.password']}:" />
+				<p:inputText value="#{altaUsuarioBean.usuarioVO.password}" label="#{msg['campo.password']}:" id="password" maxlength="30" size="30" required="true"></p:inputText>
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+				<h:outputLabel value="#{msg['campo.primer.apellido']}:" />
+				<p:inputText value="#{altaUsuarioBean.usuarioVO.apellido1}" label="Primer apellido del usuario" id="apellido1" maxlength="30" size="35" style="text-transform: uppercase;"></p:inputText>
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+				<h:outputLabel value="#{msg['campo.segundo.apellido']}:" />
+				<p:inputText value="#{altaUsuarioBean.usuarioVO.apellido2}" label="Segundo apellido del usuario" id="apellido2" maxlength="30" size="35" style="text-transform: uppercase;"></p:inputText>
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+				<h:outputLabel value="#{msg['campo.nombre']}:" />
+				<p:inputText value="#{altaUsuarioBean.usuarioVO.nombre}" label="Nombre del usuario" id="nombre" maxlength="30" size="35" style="text-transform: uppercase;"></p:inputText>
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+				<h:outputLabel value="#{msg['campo.nif']}:" />
+				<p:inputText value="#{altaUsuarioBean.usuarioVO.dni}" label="dni" id="dni" maxlength="9" size="17" style="text-transform: uppercase;"></p:inputText>
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+				<h:outputLabel value="#{msg['campo.telefono']}:" />
+				<p:inputText value="#{altaUsuarioBean.usuarioVO.telefono}" label="telefono" id="telefono" maxlength="9" size="17" style="text-transform: uppercase;"></p:inputText>
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+				<h:outputLabel value="#{msg['campo.correoElectronico']}:" />
+				<p:inputText type="email" value="#{altaUsuarioBean.usuarioVO.correo}" label="#{msg['campo.correoElectronico']}:" id="email" maxlength="30" size="30"></p:inputText>
+			</pe:fluidGridItem>	
+        	<pe:fluidGridItem type="select">
+				<p:outputLabel value="#{msg['mantenimiento.usuario.perfil']}:" />
+	       		<p:autoComplete id="perfil" dropdown="true" value="#{altaUsuarioBean.textoComboPerfil}" completeMethod="#{altaUsuarioBean.completarPerfil}" required="true" label="#{msg['mantenimiento.usuario.perfil']}" forceSelection="true"/>	
+			</pe:fluidGridItem>
+					
+        
+        </pe:fluidGrid>
+    </p:fieldset>
+	
+          
+	</ui:define>
+      		  
+</ui:composition>
+</html>

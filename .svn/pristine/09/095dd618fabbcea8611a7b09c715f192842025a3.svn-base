@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	<ui:define name="titulo">
+		<h:outputLabel value="#{msg['mantenimiento.usuario.titulo']}" />
+	</ui:define>
+
+	<ui:define name="subtitulo">
+		<h:outputLabel value="#{msg['mantenimiento.usuario.consulta']}" />
+	</ui:define>
+
+
+
+	<ui:define name="botonera">
+		<component:botonera bean="#{consultaUsuarioBean}" />
+	</ui:define>
+	<ui:define name="content">
+	
+		<p:fieldset legend="#{msg['fieldset.buscador']}" style="margin-bottom:20px">
+			<pe:fluidGrid id="criteriosBusqueda" resizeBound="true" hGutter="20" widgetVar="fluidGridWdgt">
+				<pe:fluidGridItem type="input">
+					<h:outputLabel value="#{msg['mantenimiento.usuario.username']}:" for="usernameBusqueda" />
+					<p:inputText value="#{consultaUsuarioBean.usuarioVO.username}" id="usernameBusqueda" maxlength="50" />
+				</pe:fluidGridItem>
+				<pe:fluidGridItem type="input">
+					<h:outputLabel value="#{msg['campo.primer.apellido']}:" for="nombreBusqueda" />
+					<p:inputText value="#{consultaUsuarioBean.usuarioVO.apellido1}" id="nombreBusqueda" />
+				</pe:fluidGridItem>
+			</pe:fluidGrid>
+		</p:fieldset>
+
+		
+		    <p:carousel value="#{consultaUsuarioBean.elementList}" headerText="Custom" var="usuario" itemStyle="height:200px;text-align:center" numVisible="1" easing="easeOutBounce" style="width:250px" cricular="true">
+        <h:panelGrid columns="2" style="width:100%" columnClasses="label,value">
+           
+ 
+            <h:outputText value="Id:" />
+            <h:outputText value="#{usuario.id}" />
+ 
+            <h:outputText value="Year" />
+            <h:outputText value="#{usuario.username}" />
+ 
+           
+        </h:panelGrid>
+    </p:carousel> 
+
+	</ui:define>
+</ui:composition>
+</html>

@@ -1,0 +1,1862 @@
+/* #### Font-face Frutiger, Lato, jbecerra #### */
+
+@font-face {
+	font-family: 'Frutiger';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Frutiger'), url('../resources/fonts/Frutiger.woff') format('woff');
+}
+
+@font-face {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Lato'), url('../resources/fonts/Lato.woff') format('woff');
+}
+
+html {
+	display: block;
+	overflow-x: hidden;
+}
+
+body { 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #FCFCFC;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	/*overflow: -moz-scrollbars-vertical;*/
+	font-size: 12px;
+}
+
+/* jbecerra */
+
+span.ui-menuitem-text {
+    font-size: 12px;
+    padding-left: 12px;
+}
+
+/* rsanchez menu activo y compatible para distintos navegadores */
+.ui-menuitem-active {
+	/* rsanchez_doc Compatibilidad de fondo con navegadores cada uno con su sintaxis */
+	background:#94328D -o-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0));/* For Opera 11.1 to 12.0 */
+    background:#94328D -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)); /* For Firefox 3.6 to 15 */
+    background:#94328D linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)); /* Standard syntax */ 
+	background:#94328D -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), to(rgba(255,255,255,0))); /*rsanchez_doc Compatibilidad de fondo con chrome*/
+	
+	box-shadow:0px 0px 8px #94328D;
+	color: #FFFFFF !important;
+}
+
+.ui-menuitem-link:hover span {
+	color: #FFFFFF !important;
+}
+
+/* Tab panel jbecerra */
+div.ui-tabs {
+	padding: 0;
+	border-top: 0;
+	border-right: 0;
+	top: -1px;
+	margin-right: 15px;
+}
+
+/* rsanchez pesta�a seleccionada */
+.ui-tabs-selected {
+	background:#94328D -o-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important;/* For Opera 11.1 to 12.0 */
+    background:#94328D -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important; /* For Firefox 3.6 to 15 */
+    background:#94328D linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important; /* Standard syntax */ 
+	background:#94328D -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), to(rgba(255,255,255,0))) !important; /*rsanchez_doc Compatibilidad de fondo con chrome*/
+	box-shadow:0px 0px 8px #94328D !important;
+	color: #FFFFF !important;
+}
+
+ul.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all {
+	border-bottom: 1px solid #cba1c7;
+}
+
+li.ui-state-default {
+	border-bottom: 1px solid #cba1c7;
+}
+
+li.ui-state-active {
+	top: 2px !important;
+}
+
+div.ui-tabs-panels {
+	margin-top: -1px;
+	border-right: 1px solid #cba1c7;
+	}
+
+.ui-tabs.ui-tabs-top > .ui-tabs-nav li {
+	left: -1px;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border: 1px solid #cba1c7;
+}
+
+.ui-tabs.ui-tabs-top > .ui-tabs-nav {
+	padding: 0;
+}
+
+.ui-tabs-nav {
+	background: none;
+}
+
+#contenidoCentral .ui-datatable-header.ui-widget-header.ui-corner-top {
+    text-align: left;
+    font-size: 11px;
+}
+
+.ui-datatable-footer.ui-widget-header.ui-corner-bottom {
+    text-align: left;
+}
+
+
+/**********************/
+
+.placeholder {
+	color: gray;
+}
+
+.row-par-no-select {
+	background-color: #ffffff;
+	color: #062A52;
+	font-weight: bold;
+}
+
+.row-impar-no-select {
+	background-color: #FEFDCC;
+	color: #062A52;
+	font-weight: bold;
+}
+
+.row-par {
+	background-color: #ffffff;
+	color: #062A52;
+	font-weight: bold;
+}
+
+.row-impar {
+	background-color: #FEFDCC;
+	color: #062A52;
+	font-weight: bold;
+}
+
+.row-impar:HOVER {
+	background-color: #D5CF78;
+	cursor: pointer;
+}
+
+.row-par:HOVER {
+	background-color: #D5CF78;
+	cursor: pointer;
+}
+
+textarea {
+	resize: none;
+}
+
+div#footImpresion {
+	display: none;
+	visibility: none;
+}
+
+div#semaforoPrint {
+	display: none;
+	visibility: none;
+}
+/*
+body, html {
+	overflow: hidden;
+	overflow: -moz-hidden-unscrollable;
+	height: 100%;
+}*/
+
+.align-justify {
+	text-align: justify;
+}
+
+
+
+.center-align {
+	text-align: center;
+}
+/************************************************************************************************************/
+a.inicio {
+	color: #13599B;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.inicio:link {
+	color: #13599B;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.inicio:visited {
+	color: #13599B;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.inicio:active {
+	color: #13599B;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.inicio:hover {
+	color: #0099FF;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/************************************************************************************************************/
+a.enlace {
+	COLOR: #13599B;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: bold;
+	vertical-align: middle;
+	TEXT-DECORATION: none;
+}
+
+a.enlace:link {
+	COLOR: #13599B;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: bold;
+	vertical-align: middle;
+	TEXT-DECORATION: none;
+}
+
+a.enlace:visited {
+	COLOR: #13599B;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: bold;
+	vertical-align: middle;
+	TEXT-DECORATION: none;
+}
+
+a.enlace:hover {
+	COLOR: #062E52;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: bold;
+	vertical-align: middle;
+	TEXT-DECORATION: none;
+}
+
+a.enlace:active {
+	COLOR: #13599B;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: bold;
+	vertical-align: middle;
+	TEXT-DECORATION: none;
+}
+
+.fecha_dia {
+	color: #277CDC;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.texto {
+	COLOR: #6CB15E;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: bold;
+}
+
+input.cv {
+	color: #CC0000;
+	border: 1px solid #336633;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+
+input[type="text"], input[type="password"] {
+	color: #000000;
+	background: White;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #7F9DB9;
+	padding-left: 4px;
+}
+
+input.normal {
+	color: #000000;
+	background-image: none;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #7F9DB9;
+}
+
+input.obligatorio {
+	background-color: #E0FFE0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #3F8ABA;
+	background-image: none;
+}
+
+input.deshabilitado {
+	background-color: #F2F2F2;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #F2F2F2;
+}
+
+input.deshabilitadoLetraRojo {
+	background-color: #F2F2F2;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #F2F2F2;
+	color: #FF0000;
+}
+
+input.boton {
+	color: #FFFFFF;
+	background-color: #3F8ABA;
+	border: 1px solid #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	/*text-transform: uppercase;*/
+	cursor: pointer;
+}
+
+input[type="radio"] {
+	border: 0px;
+}
+
+input[type="checkbox"] {
+	border: 0px;
+	vertical-align: middle;
+}
+
+input.boton_mensaje {
+	color: #697376;
+	background-color: #EDEABC;
+	border: 1px solid #606A6D;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	/*text-transform: uppercase;*/
+}
+
+textarea.obligatorio {
+	background-color: #E0FFE0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #3F8ABA;
+	color: #000000;
+}
+
+.deshabilitado {
+	background-color: #F2F2F2;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #F2F2F2;
+}
+
+select.deshabilitado {
+	background-color: #F2F2F2;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #F2F2F2;
+	color: #000000;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+select.deshabilitado::-ms-expand {
+	display: none;
+}
+
+textarea.deshabilitado {
+	background-color: #F2F2F2;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #F2F2F2;
+	color: #000000;
+}
+
+textarea {
+	color: #000000;
+	background: White;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #7F9DB9;
+}
+
+textarea.cv {
+	color: #CC0000;
+	background: White;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #336633;
+}
+
+select.cv {
+	color: #CC0000;
+	background: White;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #336633;
+}
+
+select {
+	color: #000000;
+	background: White;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #7F9DB9;
+}
+
+select.obligatorio {
+	color: #000000;
+	background-color: #E0FFE0;
+	background-image: none;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 1px solid #3F8ABA;
+	border-bottom: 1px solid #3F8ABA;
+	border-left: 1px solid #3F8ABA;
+	border-top: 1px solid #3F8ABA;
+	border-right: 1px solid #3F8ABA;
+}
+
+h1.titulo {
+	/*width: 1024px;*/
+	height: 18px;
+	color: #feffff;
+	font-size: 14px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	background-color: #006634;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	/*text-transform: uppercase;*/
+}
+
+.mayusculas {
+	/*text-transform: uppercase*/
+}
+
+.txt_resultado_busqueda {
+	color: #ffffff;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #94A2A6;
+}
+
+.txt_cabecera_busqueda {
+	color: #606162;
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	background-color: #EDEDED;
+}
+
+.txt_normal_neg {
+	color: #000000;
+	font: 10px Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.txt_error_500 {
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.txt_error_login { /* rojo */
+	color: #9b1d23;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+}
+
+.txt_login {
+	color: #000000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+.txt_certificado {
+	color: #13599B;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.txt_login_white {
+	background-color: #76828A;
+	color: #FFFFFF;
+	font: 11px Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+.cuadro_formulario {
+	border: 1px solid #326A9D;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	vertical-align: middle;
+}
+
+TD.campos {
+	BACKGROUND-COLOR: inherit;
+	COLOR: #333333;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+}
+
+td.centro {
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	TEXT-ALIGN: center;
+}
+
+.txt_fielset {
+	COLOR: #026634;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	FONT-WEIGHT: bold;
+}
+
+.checkbox {
+	BACKGROUND-COLOR: transparent;
+	FONT-FAMILY: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	color: #CCFFCC;
+	border: none;
+}
+
+.lateral {
+	background-color: #C4DD84;
+}
+
+.fila {
+	height: 36px;
+	color: #4EA53B;
+}
+
+.pie {
+	COLOR: #FFFFFF;
+	FONT-FAMILY: Verdana, Arial;
+	FONT-SIZE: 10px;
+	font-weight: bold;
+}
+
+.cuadro {
+	border: 1px solid #7B9275;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #333333;
+	vertical-align: middle;
+}
+
+.subindice {
+	font-size: 9px;
+	font-style: italic;
+	color: grey;
+}
+
+.iconoGuardarOn {
+	background-image:url(../imagenes/ico_imprimir_on.gif)  !important;
+}
+
+
+#material {
+	background-image: url(../imagenes/menu_subcategoria.gif);
+}
+
+#almacen {
+	background-image: url(../imagenes/menu_subcategoria.gif);
+}
+
+#proveedores {
+	background-image: url(../imagenes/menu_subcategoria.gif);
+}
+
+#suministros {
+	background-image: url(../imagenes/menu_subcategoria.gif);
+}
+
+#mantenimientos {
+	background-image: url(../imagenes/menu_subcategoria.gif);
+}
+
+#usuarios {
+	background-image: url(../imagenes/menu_sub.gif);
+}
+
+#unidades {
+	background-image: url(../imagenes/menu_sub.gif);
+}
+
+#perfiles {
+	background-image: url(../imagenes/menu_sub.gif);
+}
+
+#mensaje {
+	background-image: url(../imagenes/menu_subcategoria.gif);
+}
+
+#instrucciones {
+	background-image: url(../imagenes/menu_subcategoria.gif);
+}
+
+.txt_link {
+	BACKGROUND-COLOR: #99CC95;
+	COLOR: #062E52;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: bold;
+	vertical-align: middle;
+	TEXT-DECORATION: none;
+}
+
+.fila_normal_clara, .fila_normal_clara td input {
+	BACKGROUND-COLOR: #ffffff;
+	COLOR: #062A52;
+	FONT-FAMILY: Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	border: 0px;
+}
+
+.fila_normal_oscura, .fila_normal_oscura td input {
+	BACKGROUND-COLOR: #FFFDE1;
+	COLOR: #062A52;
+	FONT-FAMILY: Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	border: 0px;
+}
+
+.filailuminada, .filailuminada td input {
+	BACKGROUND-COLOR: #D5CF78;
+	CURSOR: pointer;
+	COLOR: #062A52;
+	FONT-FAMILY: Verdana, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	border: 0px;
+}
+
+.ruta {
+	/*width: 1024px;*/
+	height: 15px;
+	border: none;
+	background-color: #e0dfdb;
+	color: #218418;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	padding-left: 10px;
+}
+
+tr.rutaImpresion {
+	display: none;
+	visibility: none;
+}
+
+.logo {
+	margin-top: 15px;
+}
+
+.tabla_lectura {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.tabla_lectura tr td input, .tabla_lectura tr td textarea,
+	.tabla_lectura tr td select, .tabla_lectura tr td textarea,
+	.tabla_lectura tbody tr td input, .tabla_lectura tbody tr td textarea,
+	.tabla_lectura tbody tr td select, .lectura {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	background-color: #F2F2F2;
+	border: 1px solid #EEEEEE;
+}
+
+/*
+*	Este estilo se utiliza para todos los botones: Botones Ajax, Botonera y botones normales.
+*/
+.botonBotonera {
+	border: 0px;
+	margin: 3px;
+	cursor: default;
+}
+
+.botonBotoneraActivado {
+	border: 0px;
+	margin: 3px;
+	cursor: pointer;
+}
+
+.botonOculto {
+	display: none;
+	visibility: hidden;
+}
+
+.botonAccion {
+	border: 0px;
+	padding: 0 10px 0 0;
+	COLOR: #13599B;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: bold;
+	text-decoration: none;
+	/* 	vertical-align: middle; cambio esto pq el alineado es m�s correcto 	*/
+}
+
+.checkListadoBusq {
+	border: 0px;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.imagenEnlaceCentrado {
+	border: 0px;
+	padding: 0 0 0 0;
+	COLOR: #13599B;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+	FONT-SIZE: 10px;
+	FONT-WEIGHT: bold;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.panelBotonera {
+	border: 0px;
+	background-color: white;
+	width: 1024px;
+	height: 40px;
+	margin-top: 1px;
+	margin-left: 3%;
+}
+
+div.sticky-menu {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+.logo-botonera {
+	float: right;
+	height: 25px;
+	padding: 0;
+	margin-top: 6px;
+}
+
+div.sticky-menu div img {
+	display: none;
+}
+
+a.linkListado {
+	text-decoration: none;
+	border: 0px;
+	color: #062a52;
+	cursor: pointer;
+}
+
+a.linkListado img {
+	text-decoration: none;
+	border: 0;
+	color: #062a52;
+	cursor: pointer;
+}
+
+/*
+* Este estilo se utiliza en expedientes, tramitaci�ne estandar para establecer
+* la prioridad.
+*/
+.prioridadAlta {
+	color: #ff0000;
+}
+
+.prioridadMedia {
+	color: #ff9900;
+}
+
+.prioridadBaja {
+	color: #009900;
+}
+
+.botonPantalla {
+	cursor: pointer;
+}
+
+.mensajesNoLeidos {
+	FONT-WEIGHT: bold;
+}
+
+.mensajesLeidos {
+	FONT-WEIGHT: normal;
+}
+/**
+Estilo para los campos que tienen errores*/
+.highlight {
+	background-color: #fcc;
+}
+
+/** Estilo para el programa de ayudas */
+#vertical {
+	width: 15em;
+	padding: 0;
+	margin: 0 auto;
+	list-style-type: none;
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: georgia, "times new roman", serif;
+}
+
+#vertical li {
+	float: left;
+	border: 0 em solid #eee;
+	margin: 0.1em;
+}
+
+#vertical li p {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	width: 1.5em;
+	height: 1.5em;
+	border-top: 0 em solid #000;
+	height: auto;
+}
+
+#vertical li p em {
+	font-style: normal;
+	display: block;
+	text-align: center;
+	border-left: 0 em solid #000;
+	border-right: 0 em solid #000;
+}
+
+#vertical li p em.nd {
+	border-bottom: 0 em solid #000;
+}
+
+/* Estilos para la cabecera */
+.columnaAbajo {
+	padding-top: 1px;
+}
+
+.imgSup {
+	padding-top: 4px;
+	margin-bottom: 2px;
+}
+
+div#contenidoCentral {
+	/*height: 645px;
+	width: 98%;*/
+	margin-left: 1%;
+	/*overflow: auto;*/
+}
+
+div#contenidoCentralPA {
+	height: 645px;
+	overflow: auto;
+}
+
+/* ESTILOS NUEVOS SEDE */
+#pag {
+	width: 990px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+#cab {
+	position: relative;
+	height: 80px; 
+	border-bottom: 1px #646361 solid;
+	text-align: left;
+	/*background-image:url('../javax.faces.resource/bg.gif.xhtml?ln=imagenes');*/
+    background-repeat: repeat-x;
+    border-bottom: 3px solid #a2d500;
+    padding-bottom: 3px;
+}
+
+div.container-logo {
+    width: 1170px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 30px;
+}
+
+#menu {
+	position: absolute;
+	top: 0px;
+	left: 600px;
+	width: 685px;
+	height: 65px;
+	border-bottom: 10px #646361 solid;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu li {
+	position: relative;
+	float: left;
+	width: 210px;
+	margin: 0;
+	padding: 0;
+	visible: hidden;
+	line-height: 1.8em;
+	font-size: 1.1em;
+	line-height: 1.8em;
+}
+
+span.ui-menuitem-text {
+	font-size: 13px;
+	color: #92157d !important;
+	font-family: Lato;
+	font-weight: 600;
+}
+
+.login-data {
+	padding: 0; border:0;
+	color: #92157d !important;
+	font-size: 11px !important;
+}
+
+.login-data span {
+	color: #980185 !important;
+	font-size: 11px !important;
+}
+
+.ui-clock {
+	width: 120px !important;
+	float: right !important;
+	text-align: left !important;
+}
+
+.time-container {
+	width: 205px;
+	display: inline-block;
+}
+
+.login-data div {
+	color: #92157d !important;
+	padding: 0 !important;
+}
+
+.ui-menu .ui-icon {
+	position: relative;
+}
+
+.ui-menubar {
+    padding-left: 2%;
+    padding-right: 2%;
+    margin: 0 auto;
+    border: none;
+}
+
+.menu-sup {
+	border-bottom: solid darkgray;
+}
+
+/* Barra de t�tulos que le gusta a Luisma ;-) */
+
+#subtitulo {
+	 font-size: 15px;
+}
+.ui-widget-header {
+	/*background: #e3e2de;*/
+    color: #ffffff; /*#92157d;*/
+    font-family: Lato; /* font-face */
+    font-weight: 100;
+   
+    padding-left: 3%;
+    padding: 1px 6px 1px 2%;
+    text-align: center;
+    border-color: darkgray;
+}
+
+#menu li.sep {
+	width: 10px;
+	display: block;
+}
+
+#menu li.pie {
+	top: 25px;
+	/*	left: 65px;*/
+}
+
+#menu li.sep:before {
+	content: ".";
+	color: #f4f3ef;
+}
+
+#menu li a {
+	color: #555555;
+	font-size: 2.2em;
+	font-family: "QlassikMediumRegular";
+	display: block;
+	padding-bottom: 9px;
+	margin-bottom: 10px;
+	text-decoration: none;
+}
+
+.ui-widget-content {
+	background: #f9f3f9 !important;
+}
+
+/* jbecerra: le quito el footer siempre visible, se lo quedo abajo de todo de la p�gina */
+#foot {
+	background-color: #646361;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	width: 100%;
+	vertical-align: middle;
+	text-align: center;
+	width: 100%;
+	vertical-align: middle;
+	border-top: 1px ridge #111111;
+	width: 100%;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+    
+    
+}
+
+
+/** ESTILOS MIS TRAMITES **/
+div#marcoTramites {
+	border: none;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+div#marcoTramLeft {
+	float: left;
+	width: 49%;
+}
+
+div#marcoTramRight {
+	float: left;
+	width: 49%;
+	margin-left: 1%;
+}
+
+div#marcoTramBottom {
+	clear: both;
+	margin-top: 20px;
+	width: 100%;
+}
+
+h2.subtitulo {
+	/*width: 1024px;*/
+	height: 18px;
+	color: #feffff;
+	font-size: 11px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	background-color: #006634;
+	margin-top: 0px;
+	text-transform: capitalize;
+	margin-bottom: 0px;
+}
+
+p.campos, div.campos {
+	BACKGROUND-COLOR: inherit;
+	COLOR: #333333;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+}
+
+p.camposNegrita, div.camposNegrita {
+	BACKGROUND-COLOR: inherit;
+	font-weight: bold;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	COLOR: #333333;
+}
+
+div.itemSolicitud {
+	
+}
+
+div.itemProcedimiento {
+	
+}
+
+div.itemFinalizado {
+	width: 33%;
+	float: left;
+}
+
+hr {
+	width: 80%;
+	height: 15px; /*solo queremos borde*/
+	text-align: left;
+	border-top: 0px; /*quita el grosor extra de Opera y FFox*/
+	border-left: 0px;
+	border-right: 0px;
+	border-bottom: gray dashed 1px;
+	margin-top: 15px;
+}
+
+div.separadorVertical {
+	height: 80%;
+	width: 15px; /*solo queremos borde*/
+	text-align: left;
+	border-top: 0px; /*quita el grosor extra de Opera y FFox*/
+	border-left: 0px;
+	border-bottom: 0px;
+	border-right: gray dashed 1px;
+	margin-right: 15px;
+}
+
+.deploy_file {
+	float: left;
+	padding-left: 2em;
+}
+
+/* Estilos campos */
+div.containerGeneral label {
+    margin: 0 0 3px 0;
+    padding: 0;
+    display: block;
+    /*font-weight: bold;*/
+    font-family: Lato;
+    font-size: 12px;
+}
+/*
+label.campo {
+	BACKGROUND-COLOR: inherit;
+	COLOR: #333333;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 11px;
+	font-weight: bold;
+}*/
+
+.rich-tab-active {
+	background-image: none !important;
+	background-color: gray;
+}
+
+/*Busqueda de modelos */
+.modelo .rich-panel-body {
+	padding: 10px 10px 10px 10px;
+}
+
+.modelo .extdt-row-selected {
+	background-color: #D5CF78;
+}
+
+/*Despliegue de procedimientos*/
+#deploy_file .rich-fileupload-list-overflow {
+	height: 80px !important;
+}
+
+.upload .infoProceso {
+	width: 400px;
+}
+
+#deploy_file .rich-panel-body {
+	padding: 10px 10px 10px 10px
+}
+
+#deploy_file .cajaGrande {
+	width: 400px;
+}
+
+#deploy_file .rich-panel-body {
+	overflow: auto;
+}
+
+.rich-fileupload-hidden {
+	height: 10px;
+}
+
+.rich-fileupload-list-decor {
+	border: 0px;
+	background-color: transparent;
+	background-position: center;
+	text-align: center;
+	color: /*white;*/ black;
+	padding: 0px;
+}
+
+.rich-fileupload-toolbar-decor {
+	border-bottom: 0px;
+	border-top: 0px;
+	border-left: 0px;
+	padding: 0px;
+	background-color: transparent;
+	border-bottom-color: green;
+	border-top-color: green;
+	border-left-color: green;
+	width: /*50%;*/ 100%;
+	font: Arial;
+	font-size: 1px;
+	font-weight: bold;
+}
+
+.rich-fileupload-list-overflow {
+	display: none;
+}
+
+.puntero {
+	cursor: pointer;
+}
+
+.rf-ntf-det {
+	
+}
+
+.rf-ntf {
+	left: 350px !important;
+	top: 250px !important;
+}
+
+.rf-pick-btn {
+	width: 100%;
+	background-repeat: repeat-x;
+	background-position: top left;
+	background-color: #3F8ABA !important;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #C4C0B9;
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	text-align: left;
+	background-image: none !important;
+}
+
+table.rf-cal-popup {
+	width: 207px;
+}
+
+button, input[type="reset"], input[type="submit"], input[type="button"]
+	{
+	border-width: 1px;
+	border-color: #C4C0B9;
+	border-radius: 0px;
+	font-size: 11px;
+	font-family: Arial, Verdana, sans-serif;
+	color: white !important;
+	background-repeat: repeat-x;
+	background-position: top left;
+	background-color: #3F8ABA!i;
+}
+
+button:hover, input[type="reset"]:hover, input[type="submit"]:hover,
+	input[type="button"]:hover {
+	background-position: bottom left;
+	background-repeat: repeat-x;
+}
+
+.boton_nerea {
+	background-color: #3F8ABA !important;
+	background-image: none !important;
+	width: 100px;
+}
+
+label.error {
+	color: #f00;
+}
+
+input.error, input[type="text"].error, input[type="password"].error,
+	select.error, textarea.error {
+	background-color: #fee;
+}
+
+.cajonBotonesPaginacion {
+	height: 15px;
+	display: block;
+	background-color: #F5F5F5;
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-bottom: 1px;
+	border-bottom-color: BLACK;
+	border-bottom-style: solid;
+}
+
+.cajonBotonesPaginacion div#cajaTitulo {
+	width: 50%;
+	font-weight: bold;
+	font-size: 11px;
+	display: inline-block;
+	float: left;
+}
+
+.cajonBotonesPaginacion div#cajaContador {
+	width: 50%;
+	font-size: 11px;
+	display: inline-block;
+}
+
+.cajonBotonesPaginacion div#cajaBotones {
+	z-index: 9999;
+	float: none;
+	display: block;
+	position: relative;
+	top: -15px;
+}
+
+
+
+
+
+/*Estilos para mostrar imagen en botones primefaces*/ 
+
+span.guardarButton {
+    background-image: url("../resources/imagenes/icons/save.gif") !important;
+}
+
+span.nuevoButton {
+	background-image: url("../resources/imagenes/icons/add-file.gif") !important;
+}
+
+span.buscarButton {
+	background-image: url("../resources/imagenes/icons/search.gif") !important;
+}
+
+span.eliminarButton {
+	background-image: url("../resources/imagenes/icons/delete.gif") !important;
+}
+
+span.limpiarButton {
+	background-image: url("../resources/imagenes/icons/clean.gif") !important;
+}
+
+span.imprimirButton {
+	background-image: url("../resources/imagenes/icons/print.gif") !important;
+}
+
+span.ayudaButton {
+	background-image: url("../resources/imagenes/icons/help.gif") !important;
+}
+
+span.salirButton {
+	background-image: url("../resources/imagenes/icons/back.gif") !important;
+}
+
+button.botonera span.ui-icon {
+	width: 25px;
+    height: 25px;
+    margin-top: 3px;
+}
+
+button.botonera span.ui-button-text.ui-c {
+	font-size: 11px;
+    font-weight: 100;
+    color: #980185;
+}
+
+.ui-button-icon-left {
+	left: inherit;
+}
+
+.ui-button-icon-only .ui-icon, .ui-button-text-icon-left .ui-icon, .ui-button-text-icon-right .ui-icon {
+	position: relative;
+	margin: 0 auto;
+}
+
+.ui-button-text-icon-left .ui-button-text {
+	padding: inherit;
+}
+
+/* rsanchez para los menus seleccionados */
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+	background:#94328D -o-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important;/* For Opera 11.1 to 12.0 */
+    background:#94328D -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important; /* For Firefox 3.6 to 15 */
+    background:#94328D linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important; /* Standard syntax */ 
+	background:#94328D -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), to(rgba(255,255,255,0))) !important; /*rsanchez_doc Compatibilidad de fondo con chrome*/
+	box-shadow:0px 0px 8px #94328D !important;
+	color: #FFFFFF !important;
+}
+
+
+button[disabled] {
+	background-image: none;
+	background-color: transparent;
+	filter: grayscale(100%);
+	-webkit-filter: grayscale(100%);
+}
+
+.botonera {
+    background: none;
+    /*border: none !important;*/
+    width: 53px !important;
+    /*height: 43px;*/
+}
+
+legend {
+	font-family: Frutiger;
+	font-size: 13px;
+	font-weight: bold;
+	border: none !important;
+}
+
+.ui-fieldset .ui-fieldset-legend {
+	font-family: Lato;
+	font-size: 13px;
+	font-weight: bold;
+	border: none;
+}
+
+.ui-button-icon-only .ui-icon, .ui-button-text-icon-primary .ui-icon, .ui-button-text-icon-secondary .ui-icon, .ui-button-text-icons .ui-icon, .ui-button-icons-only .ui-icon  {
+	position: relative;
+	margin: 0;
+}
+
+/* Borde inferior Tabspanel */
+ul.ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all {
+	border-bottom: 2px solid #cba1c7 !important;
+}
+
+/* Sombreado en tabs no seleccionados */
+li.ui-state-default.ui-corner-top[aria-selected=false] {
+    -webkit-box-shadow: inset 0 -8px 7px -9px rgba(0,0,0,.4);
+    box-shadow: inset 0 -8px 7px -9px rgba(0,0,0,.4);
+}
+
+/* Fondo tab seleccionada */
+li.ui-state-default.ui-tabs-selected.ui-state-active.ui-corner-top {
+    background-color: rgb(242, 234, 243);
+    background-image: url(../javax.faces.resource/images/ui-bg_glass_75_f2eaf3_1x400.png.xhtml?ln=primefaces-viogen);
+}
+
+div.containerGeneral {
+	border-left: none;
+	border-right: none;
+	border-top: 2px solid lightgray;
+}
+
+.copyright {
+    color: antiquewhite;
+    font-size: 10px;
+}
+
+#formulario {
+	margin-bottom: 30px;
+}
+
+/** Dynagrid, formularios responsive */
+ .pe-fluidgrid-item {
+    width: 160px;
+    height: 60px;
+}
+
+.pe-fluidgrid-item input {
+    width: 150px;
+}
+
+.pe-fluidgrid-item.calendar input {
+    width: 120px;
+}
+
+.pe-fluidgrid-item.select .ui-selectonemenu {
+    width: 157px !important;
+}
+
+.pe-fluidgrid-item.select .ui-selectonemenu .ui-selectonemenu-label {
+    width: 130px !important;
+}
+
+.pe-fluidgrid-item.select input {
+	width: 136px;
+}
+
+.ui-autocomplete .ui-autocomplete-dropdown {
+	width: 24px;
+}
+
+.ui-button-icon-only .ui-icon {
+    left: 20%;
+}
+
+.dynaFormLabel {
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+input[aria-disabled="true"] {
+	background-color: #e0e4e9;
+}
+
+.calendarDataTable input {
+	width: 100% !important;
+	text-align: center;
+}
+
+.containerGeneral input {
+	/*text-transform: uppercase;*/
+}
+
+/*Clase para definir un input de 200px*/
+.fg-400 {
+	width: 400px !important;
+}
+
+/*Clase para definir un input de 200px*/
+.fg-300 {
+	width: 300px !important;
+}
+
+/*Clase para definir un input de 240px*/
+.fg-240 {
+	width: 240px !important;
+}
+
+/*rsanchez Clase para dar m�s tama�o a los autocomplete ya que estan pegados a los demas campos*/
+.fg-200 {
+	width: 200px !important;
+}
+
+.fg-180 {
+	width: 180px !important;
+}
+
+/* rsanchez Para campos mas peque�os */
+.fg-80 {
+	width: 80px !important;
+}
+
+.fg-300-auto{
+	position: relative; width: 300px; height: 60px;display: -webkit-inline-box;
+}
+
+/*csperilla tama?os fluidgriditem */
+.pe-fluidgrid-item-60{width: 60px;}
+.pe-fluidgrid-item-80{width: 80px;}
+.pe-fluidgrid-item-100{width: 100px;}
+.pe-fluidgrid-item-120{width: 120px;}
+.pe-fluidgrid-item-140{width: 140px;}
+.pe-fluidgrid-item-160{width: 160px;}
+.pe-fluidgrid-item-180{width: 180px;}
+.pe-fluidgrid-item-190{width: 190px;}
+.pe-fluidgrid-item-200{width: 200px;}
+.pe-fluidgrid-item-220{width: 220px;}
+.pe-fluidgrid-item-240{width: 240px;}
+.pe-fluidgrid-item-400{width: 400px;}
+.pe-fluidgrid-item-450{width: 450px;}
+.pe-fluidgrid-item-500{width: 500px;}
+
+/* Para dar un color distinto a las filas pares e impares de las datatables jbecerra */
+/* Para dar un color distinto a las filas pares e impares de las datatables jbecerra */
+.highlight1 {
+	background-color: #ffffff !important;
+	height: 25px;
+}
+.highlight2 {
+	background-color: rgba(240, 220, 235, 0) !important;
+	height: 25px;
+}
+
+/* rsanchez fila del datatable con el raton */
+tr.ui-state-hover {
+	background:#D69DD2 -o-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important;/* For Opera 11.1 to 12.0 */
+    background:#D69DD2 -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important; /* For Firefox 3.6 to 15 */
+    background:#D69DD2 linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important; /* Standard syntax */ 
+	background:#D69DD2 -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), to(rgba(255,255,255,0))) !important; /*rsanchez_doc Compatibilidad de fondo con chrome*/
+	box-shadow:0px 0px 8px #D69DD2 !important;
+}	
+
+/* rsanchez fila del datatable seleccionada */
+tr.ui-state-highlight{
+	/*background-color: #4ea8de!important;*/
+	border: 2px !important;
+	border-top:4px !important;
+	border-top-color: #D69DD2 !important;
+	border-color: #D69DD2 !important;
+	
+	/* rsanchez_doc Compatibilidad de fondo con navegadores cada uno con su sintaxis */
+	background:#D69DD2 -o-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important;/* For Opera 11.1 to 12.0 */
+    background:#D69DD2 -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important; /* For Firefox 3.6 to 15 */
+    background:#D69DD2 linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)) !important; /* Standard syntax */ 
+	background:#D69DD2 -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), to(rgba(255,255,255,0))) !important; /*rsanchez_doc Compatibilidad de fondo con chrome*/
+	box-shadow:0px 0px 8px #D69DD2 !important;
+}
+
+/* rsanchez color de letra en datatable fila con el raton */
+/*.ui-state-hover a {
+	color: #062a52 !important;
+}*/
+
+.ui-datatable tbody td {
+	padding: 1px 10px;
+}	
+/* Estilos botones paginaci?n */
+span.ui-paginator-prev, span.ui-paginator-first, span.ui-paginator-next, span.ui-paginator-last {
+	background: #ffffff url("/AyudaContingencias/javax.faces.resource/images/ui-bg_glass_85_e5d6e7_1x400.png.xhtml?ln=primefaces-acon") 50% 50% repeat-x;
+}
+
+.ui-datatable-header {
+	font-weight: normal !important;
+}
+
+/* Estilo campo requirido */
+label.required::after { content:" (*)";color: red; }
+
+input {
+	background-color: #ffffff !important;
+}
+    
+/*rsanchez sobreescribir estilo focus*/
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+  border-color: #980185;
+  box-shadow: 0px 0px 8px #94328D;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+	border: 1px solid rgb(193, 139, 178);
+}
+
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+	border: 1px solid #cd0a0a;
+	background: #fef1ec url("/AsistenteAGILE/javax.faces.resource/images/ui-bg_glass_95_fef1ec_1x400.png.xhtml?ln=primefaces-viogen") 50% 50% repeat-x;
+	color: #cd0a0a;
+}
+
+/* rsanchez clases para el growl */
+/* ie6 trash */
+
+* html .ui-growl {
+        position:absolute;
+}
+* html .ui-growl-item {
+        padding-bottom:0;
+}
+* html .ui-growl-icon-close {
+        top:7px;
+        left:7px;
+}
+
+/* the norm */
+.ui-growl {
+        position:fixed;
+        top:60px;
+/*         right:20px; */
+		/* posicionar en el centro de la pantalla */
+		right:40%;
+        width:inherit;
+        z-index:9999;
+}
+.ui-growl-item-container {
+        position:relative;
+        margin:0 0 10px 0;
+        opacity:0.85;
+        filter:alpha(opacity=85);
+}
+.ui-growl-item {
+        display:block;
+        padding:10px 15px;
+}
+.ui-growl-item p {
+        padding:0;
+        margin:0;
+}
+.ui-growl-icon-close {
+        position:absolute;
+        top:5px;
+        /* left:3px; */
+        /* mostrar a la derecha */
+        right: 5px;
+        cursor:pointer;
+}
+.ui-growl-title {
+        font-weight:bold;
+        padding:0 0 7px 0;
+        display:block;
+        width: 300px; /*rsanchez 20160127 aumentado el tama�o fijo del titulo del growl para adaptar el mensaje de error en login */
+}
+.ui-growl-image {
+        width:32px;
+        height:32px;
+        float:left;
+}
+.ui-growl-message {
+        padding:8px 0 5px 0;
+        width:100%;
+        float:none;
+}
+
+/*msalguero estilo  growl */ 
+.ui-growl .ui-state-highlight {
+	background: none;
+	background-color: rgb(167, 126, 161);
+	border: 2px solid rgba(205, 205, 205, 0.72);
+	width:100%; /*rsanchez 20160127 no modificar ya que con este tama�o se consigue que cada mensaje aparezca en una misma fila del growl*/
+    
+	color:white;
+	font-size: 15px;
+	
+}
+
+.ui-growl-message p {
+        font-weight: normal;
+} 
+
+/* rsanchez se ha comentado, se usaba en el check de los datatables y no se mostraba el check */
+.ui-state-active .ui-icon{
+	background-image: url("/AsistenteAGILE/javax.faces.resource/images/ui-icons_803589_256x240.png.xhtml?ln=primefaces-viogen");
+}
+
+/* rsanchez para la imagen loading */
+div.waiter div  {
+	background: transparent !important;
+}
+
+/* rsanchez elemento seleccionado del combo */
+.ui-autocomplete-panel .ui-state-highlight {
+	/* rsanchez_doc Compatibilidad de fondo con navegadores cada uno con su sintaxis */
+	background:#94328D -o-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0));/* For Opera 11.1 to 12.0 */
+    background:#94328D -moz-linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)); /* For Firefox 3.6 to 15 */
+    background:#94328D linear-gradient(top, rgba(255,255,255,0.6), rgba(255,255,255,0)); /* Standard syntax */ 
+	background:#94328D -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.6)), to(rgba(255,255,255,0))); /*rsanchez_doc Compatibilidad de fondo con chrome*/
+	box-shadow:0px 0px 8px #94328D;
+	color: #FFFFFF !important;
+}
+
+/* rsanchez aumentar el trama�o de los submenus */
+.ui-menu .ui-menu-parent .ui-menu-child {
+	width: 15em !important;
+}
+
+/* rsanchez Clase para cambiar el input de un calendar */
+span.errorInputCalendar input {
+	border: 1px solid #cd0a0a !important;
+	background: #fef1ec url("/AyudaContingencias/javax.faces.resource/images/ui-bg_glass_95_fef1ec_1x400.png.xhtml?ln=primefaces-acon") 50% 50% repeat-x;
+	color: #cd0a0a !important;
+}
+
+/*span.ui-menuitem-text {
+	color: #FFFFFF !important;
+}*/
+
+/* rsanchez  cambiar estilo de numeracion de datatables de paginas*/
+.ui-paginator-page.ui-state-default.ui-corner-all {
+	color: #FFFFFF !important;
+}
+
+.ui-paginator-page.ui-state-default.ui-corner-all.ui-state-active, 
+.ui-paginator-page.ui-state-default.ui-corner-all.ui-state-hover {
+	color: #980185 !important;
+}
+
+.ui-button.ui-widget.ui-state-default.ui-corner-all.ui-button-text-icon-left.botonera.ui-state-hover {
+	background: #EFDAE9 !important;
+	border: 1px solid #94328D;
+}
+
+.ui-datatable-tablewrapper {
+    background-color: #A77FA2 !important;
+}
+
+.styleDisabled {
+	opacity: .80 !important;
+	background-color: #EACEE2 !important;
+	color: #6E1F77 !important;
+}
+
+/*rsanchez disabled en fechas*/
+span.disabledInputCalendar input {
+	opacity: .80 !important;
+	background-color: #EACEE2 !important;
+	color: #6E1F77 !important;
+}
+
+/*rsanchez*/
+.pe-inputNumber.ui-state-disabled {
+	opacity: .80 !important;
+	background-color: #EACEE2 !important;
+	color: #6E1F77 !important;
+}
+
+span.error-validacion input.ui-autocomplete-input {
+	border: 1px solid #cd0a0a;
+    background: #fef1ec url("/AsistenteAGILE/javax.faces.resource/images/ui-bg_glass_95_fef1ec_1x400.png.xhtml?ln=primefaces-viogen") 50% 50% repeat-x;
+    color: #cd0a0a;
+}
+
+/*rsanchez estilo para las filas seleccionadas en el datatable*/
+.ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a {
+	color: #5A1756 !important;
+}
+
+/* rsanchez fila de titulo de columnas datatable*/
+.ui-column-title {
+	color: white;
+}
+
+.linkColumnas{
+	text-decoration: none;
+	border: 0px;
+	cursor: pointer;
+	color: white;
+    float: right;
+}
+
+span.ui-slider-handle {
+	background: white !important; 
+}
+
+.botton-230PX input {
+	width: 230px;
+}
+
+
+.ui-widget-overlay {
+	z-index: 1001 !important;
+}
+
+

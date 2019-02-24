@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:component="TagComponent"
+	xmlns:pe="http://primefaces.org/ui/extensions"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="../estructura/defaultLayout.xhtml">
+
+	
+	<ui:define name="botonera">
+		<component:botonera bean="#{altaTrabajoBean}" /> 
+	</ui:define>
+	<ui:define name="content">
+	
+	<p:fieldset legend="Nuevo Trabajador">
+		<pe:fluidGrid id="fgAltaTrabajador" resizeBound="true" hGutter="20" widgetVar="fluidGridWdgt">
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Trabajador" />						
+				<p:autoComplete dropdown="true" value="#{altaTrabajoBean.trabajoRealizadoVO.textoTrabajador}" completeMethod="#{altaTrabajoBean.completeTextTrabajador}" />	
+			</pe:fluidGridItem>
+	    	<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Parcela" />
+	        	<p:autoComplete dropdown="true" value="#{altaTrabajoBean.trabajoRealizadoVO.textoParcela}" completeMethod="#{altaTrabajoBean.completeTextParcelas}" />								
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Descripcion" />						
+				<p:inputText value="#{altaTrabajoBean.trabajoRealizadoVO.descripcion}" label="descripcion" id="descripcion" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Importe" />						
+				<p:inputText value="#{altaTrabajoBean.trabajoRealizadoVO.importe}" label="importe" id="importe" maxlength="50" size="50" style="text-transform: uppercase;" required="true"></p:inputText>	
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Fecha Inicio"/>							
+				<p:inputMask value="#{altaTrabajoBean.trabajoRealizadoVO.textoFechaInicio}" mask="99/99/9999"/>
+			</pe:fluidGridItem>
+			<pe:fluidGridItem type="input">
+	        	<h:outputLabel value="Fecha Fin"/>							
+				<p:inputMask value="#{altaTrabajoBean.trabajoRealizadoVO.textoFechaFin}" mask="99/99/9999"/>
+			</pe:fluidGridItem>
+    	</pe:fluidGrid>
+	</p:fieldset>
+	
+	
+          
+	</ui:define>
+      		  
+</ui:composition>
+</html>

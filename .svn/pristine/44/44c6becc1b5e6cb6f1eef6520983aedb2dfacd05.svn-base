@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Built-By: Carlos
+Build-Jdk: 1.7.0_79
+Class-Path: lib/commons-httpclient-3.1.jar lib/commons-logging-1.0.4.j
+ ar lib/commons-codec-1.2.jar lib/poi-3.13.jar lib/itext-2.1.7.jar lib
+ /bcmail-jdk14-138.jar lib/bcprov-jdk14-138.jar lib/bctsp-jdk14-1.38.j
+ ar lib/bcprov-jdk14-1.38.jar lib/bcmail-jdk14-1.38.jar lib/jython-sta
+ ndalone-2.5.2.jar lib/dozer-5.4.0.jar lib/commons-beanutils-1.8.3.jar
+  lib/jcl-over-slf4j-1.6.6.jar lib/slf4j-log4j12-1.6.6.jar lib/log4j-1
+ .2.17.jar lib/hibernate-entitymanager-4.2.18.Final.jar lib/jboss-logg
+ ing-3.1.0.GA.jar lib/dom4j-1.6.1.jar lib/javassist-3.18.1-GA.jar lib/
+ jboss-transaction-api_1.1_spec-1.0.1.Final.jar lib/hibernate-jpa-2.0-
+ api-1.0.1.Final.jar lib/hibernate-commons-annotations-4.0.2.Final.jar
+  lib/hibernate-core-4.2.18.Final.jar lib/antlr-2.7.7.jar lib/javaee-a
+ pi-6.0.jar lib/jsf-api-2.1.28.jar lib/slf4j-api-1.6.4.jar lib/commons
+ -fileupload-1.2.2.jar lib/commons-io-1.4.jar lib/javax.ejb-api-3.2.ja
+ r lib/javax.transaction-api-1.2.jar lib/jcommon-1.0.0.jar lib/junit-3
+ .8.jar lib/jodreports-test-3.0.2.jar lib/guava-10.0-rc1.jar lib/jsr30
+ 5-1.3.9.jar lib/fest-assert-1.4.jar lib/fest-util-1.1.6.jar lib/testn
+ g-5.14.9.jar lib/bsh-2.0b4.jar lib/guice-2.0.jar lib/aopalliance-1.0.
+ jar lib/jcommander-1.12.jar lib/snakeyaml-1.6.jar lib/jodconverter-2.
+ 2.1.jar lib/juh-2.3.0.jar lib/jurt-2.3.0.jar lib/ridl-2.3.0.jar lib/u
+ noil-2.3.0.jar lib/jodreports-library-3.0.0.jar lib/freemarker-2.3.16
+ .jar lib/xom-1.2.5.jar lib/simple-odf-0.5.5.jar lib/odfdom-java-0.8.7
+ .jar lib/xercesImpl-2.9.1.jar lib/xml-apis-1.3.04.jar lib/hibernate-v
+ alidator-4.1.0.Final.jar lib/validation-api-1.0.0.GA.jar lib/omniface
+ s-1.8.1.jar lib/primefaces-5.2.jar lib/all-themes-1.0.8.jar lib/after
+ dark-1.0.8.jar lib/afternoon-1.0.8.jar lib/afterwork-1.0.8.jar lib/bl
+ ack-tie-1.0.8.jar lib/blitzer-1.0.8.jar lib/bluesky-1.0.8.jar lib/boo
+ tstrap-1.0.8.jar lib/casablanca-1.0.8.jar lib/cruze-1.0.8.jar lib/cup
+ ertino-1.0.8.jar lib/dark-hive-1.0.8.jar lib/dot-luv-1.0.8.jar lib/eg
+ gplant-1.0.8.jar lib/excite-bike-1.0.8.jar lib/flick-1.0.8.jar lib/gl
+ ass-x-1.0.8.jar lib/hot-sneaks-1.0.8.jar lib/humanity-1.0.8.jar lib/l
+ e-frog-1.0.8.jar lib/midnight-1.0.8.jar lib/mint-choc-1.0.8.jar lib/o
+ vercast-1.0.8.jar lib/pepper-grinder-1.0.8.jar lib/redmond-1.0.8.jar 
+ lib/rocket-1.0.8.jar lib/sam-1.0.8.jar lib/smoothness-1.0.8.jar lib/s
+ outh-street-1.0.8.jar lib/start-1.0.8.jar lib/sunny-1.0.8.jar lib/swa
+ nky-purse-1.0.8.jar lib/trontastic-1.0.8.jar lib/ui-darkness-1.0.8.ja
+ r lib/ui-lightness-1.0.8.jar lib/vader-1.0.8.jar lib/home-1.0.8.jar l
+ ib/primefaces-extensions-3.2.0.jar lib/gson-2.2.4.jar lib/commons-lan
+ g3-3.0.jar
+Created-By: Maven Integration for Eclipse
+

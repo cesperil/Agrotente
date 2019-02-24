@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>GrapeCheck</groupId>
+	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>GrapeCheck</artifactId>
+	<packaging>war</packaging>
+	<name>GrapeCheck</name>
+
+	<dependencies>
+	
+			<dependency> <!-- necesario para que funcine el clienteAdministradoAxis -->
+				<groupId>commons-httpclient</groupId>
+				<artifactId>commons-httpclient</artifactId>
+				<version>3.1</version>
+			</dependency>
+	
+			<!-- rsanchez 20160208 lmpaz 06/11/2015 Para llamar a la seguridad de la junta y comprobar si el username del login esta en LDAP -->
+			<!-- RAUL 17052016 <dependency>
+			   <groupId>ClienteSeguridadAxis</groupId>
+  			   <artifactId>ClienteSeguridadAxis</artifactId>
+  			   <version>0.0.1-SNAPSHOT</version>
+  			   <scope>compile</scope>
+			</dependency>
+			
+			<dependency>
+				 <groupId>ClienteAdministradoAxis</groupId>
+		  		 <artifactId>ClienteAdministradoAxis</artifactId>
+		  		 <version>0.0.1-SNAPSHOT</version>
+		  		 <scope>compile</scope>
+  		 	</dependency>
+  		 
+			 <dependency>
+			   <groupId>ClienteConsultaTercerosAxis</groupId>
+  			   <artifactId>ClienteConsultaTercerosAxis</artifactId>
+  			   <version>0.0.1-SNAPSHOT</version>
+  			   <scope>compile</scope>
+			</dependency>  --> 
+			
+			<!--  pendiente luisma
+		<dependency>
+			   <groupId>ClienteConsultaApremiosAxis</groupId>
+  			   <artifactId>ClienteConsultaApremiosAxis</artifactId>
+  			   <version>0.0.1-SNAPSHOT</version>
+  			   <scope>compile</scope>
+		</dependency>
+		-->  	
+
+   			<!-- Export excel -->
+   			<dependency>
+               <groupId>org.apache.poi</groupId>
+               <artifactId>poi</artifactId> 
+               <version>3.13</version>
+                <scope>compile</scope>
+            </dependency>
+
+			<!--  Export CSV -->
+			<dependency>
+		        <groupId>com.lowagie</groupId>
+		        <artifactId>itext</artifactId>
+		        <version>2.1.7</version>
+		        <scope>compile</scope>
+		    </dependency>
+
+		<dependency>
+			<groupId>org.python</groupId>
+			<artifactId>jython-standalone</artifactId>
+			<version>2.5.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>sample</groupId>
+		    <artifactId>com.sample</artifactId>
+		    <version>1.0</version>
+		    <scope>system</scope>
+		    <systemPath>${project.basedir}/src/main/webapp/WEB-INF/lib/valnif.jar</systemPath>
+		</dependency>
+
+		<dependency>   <!-- necesario para usar dozer  org.dozer.DozerBeanMapper; import org.dozer.Mapper; -->
+			<groupId>net.sf.dozer</groupId>
+			<artifactId>dozer</artifactId>
+			<version>5.4.0</version>
+		</dependency>
+		
+	<!-- cesperilla 13-10-2015 dependencias log -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.core.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.core.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>6.0</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>2.1.28</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.2.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>1.4</version>
+		</dependency>
+
+		<!-- lmpaz 07/10/2015 EJB 3.2  -->
+		<dependency>
+			<groupId>javax.ejb</groupId>
+			<artifactId>javax.ejb-api</artifactId>
+			<version>3.2</version>
+		</dependency>
+		
+		<!-- rsanchez -->
+		<!-- Dependencia usada para gestionar Log: import org.jfree.util.Log; -->
+		<dependency>
+			<groupId>jfree</groupId>
+			<artifactId>jcommon</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<!-- rsanchez -->
+		
+		<!-- cesperilla 04-11-2015  dependecia reports odt -->	
+		<dependency>
+			<groupId>org.jodreports</groupId>
+			<artifactId>jodreports-test</artifactId>
+			<version>3.0.2</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.omnifaces</groupId>
+			<artifactId>omnifaces</artifactId>
+			<version>1.8.1</version>
+		</dependency>
+		
+        <!-- rsanchez ultima version primefaces depedencia para usar en loginBean RequestContext -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>5.2</version>
+		</dependency>
+		<!-- rsanchez añadida versiones para themas de primefaces -->
+		<dependency>
+			<groupId>org.primefaces.extensions</groupId>
+			<artifactId>all-themes</artifactId>
+			<version>1.0.8</version>
+		</dependency>
+		<!-- Dynaform, Responsive Forms, entre otras utilidades -->
+		<dependency>
+			<groupId>org.primefaces.extensions</groupId>
+			<artifactId>primefaces-extensions</artifactId>
+			<version>3.2.0</version>
+		</dependency>
+
+		<!-- cesperilla  -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.chemistry.opencmis/chemistry-opencmis-client-impl -->
+		<dependency>
+		    <groupId>org.apache.chemistry.opencmis</groupId>
+		    <artifactId>chemistry-opencmis-client-impl</artifactId>
+		    <version>1.1.0</version>
+		</dependency>
+		
+        
+	</dependencies>
+	
+	<repositories>
+		<!-- rsanchez -->
+		   	<repository>
+			<id>JBOSS</id>
+			<name>JBoss Repository</name>
+			<url>http://repository.jboss.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>Apache</id>
+			<name>Apache</name>
+			<url>https://repository.apache.org/content/repositories/snapshots</url>
+		</repository>
+		<repository>
+			<id>repositorio-compilator</id>
+			<name>Repositorio Compilator</name>
+			<url>scp://compilator.merida.net/root/.m2/repository/</url>
+		</repository>
+	  	<repository>
+			<id>MVN-Repository</id>
+			<name>Repositorio Mvn</name>
+			<url>http://mvnrepository.com</url>
+		</repository> 
+		<repository>  
+   			<id>prime-repo</id>  
+    		<name>PrimeFaces Maven Repository</name>  
+    		<url>http://repository.primefaces.org</url>  
+    		<layout>default</layout>  
+		</repository>  
+		<!-- rsanchez -->
+		<repository>
+			<id>jboss-public-repository-group</id>
+			<name>JBoss Public Maven Repository Group</name>
+			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+			<layout>default</layout>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
+			</snapshots>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+			<id>jboss-public-repository</id>
+			<name>JBoss Public</name>
+			<url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.jboss.as.plugins</groupId>
+					<artifactId>jboss-as-maven-plugin</artifactId>
+					<version>7.3.Final</version>
+				</plugin>
+	
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>2.3.1</version>
+					<configuration>
+						<source>1.6</source>
+						<target>1.6</target>
+						<encoding>${project.build.sourceEncoding}</encoding>
+						<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.7</version>
+					<configuration>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-war-plugin</artifactId>
+					<version> 2.1-alpha-2 </version>
+					<configuration>
+						<archive>
+							<manifest>
+								<addClasspath>true</addClasspath>
+								<classpathPrefix>lib/</classpathPrefix>
+							</manifest>
+						</archive>
+						<webXml>${webXmlPath}</webXml>
+					</configuration>
+				</plugin>
+	
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>native2ascii-maven-plugin</artifactId>
+					<version>1.0-alpha-1</version>
+					<configuration>
+						<src>src/main/resources</src>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>native2ascii</goal>
+							</goals>
+							<configuration>
+								<encoding>UTF8</encoding>
+								<src>${basedir}/src/main/resources</src>
+								<dest>target/classes</dest>
+								<includes>**/*.properties</includes>
+							</configuration>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-resources-plugin</artifactId>
+					<version>2.7</version>
+					<configuration>
+						<nonFilteredFileExtensions>
+							<nonFilteredFileExtension>properties</nonFilteredFileExtension>
+						</nonFilteredFileExtensions>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+	
+	
+	<!-- luisma No Borrar. es para indicar distintos web.xml segun el entorno de ejecucion
+	<profiles>
+		<profile>
+			<id>desarrollo-gpex</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<webXmlPath>${basedir}/src/main/webapp/WEB-INF/custom/desarrollo_gpex/web.xml</webXmlPath>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<filtering>true</filtering>
+						<directory>${basedir}/src/main/resources/desarrollo_gpex</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+		<profile>
+			<id>pruebas-gpex</id>
+			<properties>
+				<webXmlPath>${basedir}/src/main/webapp/WEB-INF/custom/pruebas_gpex/web.xml</webXmlPath>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<filtering>true</filtering>
+						<directory>${basedir}/src/main/resources/pruebas_gpex</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+
+		<profile>
+			<id>desarrollo-gobex</id>
+			<properties>
+				<webXmlPath>${basedir}/src/main/webapp/WEB-INF/custom/desarrollo_gobex/web.xml</webXmlPath>
+			</properties>
+			<build>
+				<resources>
+					<resource>
+						<filtering>true</filtering>
+						<directory>${basedir}/src/main/resources/desarrollo_gobex</directory>
+					</resource>
+				</resources>
+			</build>
+		</profile>
+
+	</profiles>
+	 -->
+	
+	
+	<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.resources.sourceEncoding>UTF-8</project.resources.sourceEncoding>
+        <jbpm.version>6.2.0.Final</jbpm.version>
+        <drools.version>6.2.0.Final</drools.version>
+        <arquillian.bom.version>1.1.0.Final</arquillian.bom.version>
+        <slf4j.version>1.6.4</slf4j.version>
+        <solder.version>3.2.0.Final</solder.version>
+        <jboss.javaee.version>1.0.0.Final</jboss.javaee.version>
+        <logback.version>1.0.9</logback.version>
+        <btm.version>2.1.4</btm.version>
+        <arquillian.weld.version>1.0.0.CR3</arquillian.weld.version>
+        <hibernate.version>4.2.18.Final</hibernate.version>
+        <hibernate.core.version>4.2.18.Final</hibernate.core.version>
+		<hibernate.jpamodelgen>4.3.0.Final</hibernate.jpamodelgen>
+		<jasperreports.version>4.0.1</jasperreports.version>
+        <jasperreports.version>4.0.1</jasperreports.version>
+		<jython.version>2.5.0</jython.version>
+
+    </properties>
+	
+</project>

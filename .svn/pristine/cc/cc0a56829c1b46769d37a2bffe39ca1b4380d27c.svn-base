@@ -1,0 +1,40 @@
+package es.grapecheck.plataforma.webaction.bean;
+
+import javax.faces.bean.ManagedBean;
+
+import es.grapecheck.plataforma.utiles.FacesUtils;
+
+/**
+ * @author rsanchez
+ * 
+ * Bean creado para controlar las acciones que puede realizar el menu como eliminar Bean en session excepto el bean del usuario
+ * 
+ */
+
+@ManagedBean
+public class MenuBean {
+
+	public MenuBean() {
+		super();
+	}
+	
+	public String borrarBeanSesionMenosUsuario(int redirigir) {
+		
+		
+		FacesUtils.borrarBeanSessionMenosUsuario();
+        String pagina = "";
+        
+        switch (redirigir) {
+        	case 0: pagina = "/construyendo.xhtml";break;
+        	case 1: pagina = "/expedientes/consultaExpediente.xhtml";break;
+        	case 2: pagina = "/mantenimientos/consultaUsuario.xhtml";break;
+        	default: pagina= "/construyendo.xhtml";
+        }
+        return pagina;
+    }
+	
+	public String goInicio(){
+		return "../Asistente.xhtml?faces-redirect=true";
+	}
+
+}

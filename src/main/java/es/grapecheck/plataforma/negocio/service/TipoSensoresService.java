@@ -1,0 +1,63 @@
+/**
+ * 
+ */
+package es.grapecheck.plataforma.negocio.service;
+
+import java.util.List;
+
+import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+import javax.ejb.TransactionAttribute;
+import javax.ejb.TransactionAttributeType;
+import javax.inject.Inject;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import es.grapecheck.plataforma.persistencia.dao.TipoSensoresDAO;
+import es.grapecheck.plataforma.persistencia.exception.PersistenciaException;
+import es.grapecheck.plataforma.persistencia.vo.TipoSensoresVO;
+
+/**
+ * @author Alejandro
+ *
+ */
+@Stateless
+@LocalBean
+public class TipoSensoresService {
+
+private static final Logger LOG = LoggerFactory.getLogger(TipoSensoresService.class);
+	
+	@Inject
+	private TipoSensoresDAO tSensoresDAO;
+
+	public TipoSensoresDAO getTipoSensoresDAO() {
+		return tSensoresDAO;
+	}
+
+	public void setTipoSensoresDAO(TipoSensoresDAO tSensoresDAO) {
+		this.tSensoresDAO = tSensoresDAO;
+	}
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public void addTipoSensores(TipoSensoresVO tSensoresVO) throws PersistenciaException {
+		getTipoSensoresDAO().create(tSensoresVO);
+	}
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public void updateTipoSensores(TipoSensoresVO tSensoresVO) throws PersistenciaException {
+		getTipoSensoresDAO().update(tSensoresVO);
+	}
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public List<TipoSensoresVO> getAllTipoSensoresFiltros (TipoSensoresVO tSensoresVO) throws PersistenciaException {
+		return getTipoSensoresDAO().getAllTipoSensoresFiltros(tSensoresVO);
+	}
+	
+	@TransactionAttribute(TransactionAttributeType.REQUIRED)
+	public void deleteTipoSensores(TipoSensoresVO tSensoresVO) throws PersistenciaException {
+		getTipoSensoresDAO().delete(tSensoresVO);
+	}
+	
+	
+}
